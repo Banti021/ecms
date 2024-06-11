@@ -1,14 +1,13 @@
-using ECMS.Models;
-using ECMS.Seeders;
 using Microsoft.EntityFrameworkCore;
+using ECMS.Models;
 
 namespace ECMS.Context
 {
-    public class ApplicationContext: DbContext
+    public class ApplicationContext : DbContext
     {
-        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options){}
+        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
 
-        public DbSet<Address?> Addresses { get; set; }
+        public DbSet<Address> Addresses { get; set; }
         public DbSet<Area> Areas { get; set; }
         public DbSet<AreaEvent> AreaEvents { get; set; }
         public DbSet<Customer> Customers { get; set; }
@@ -28,7 +27,7 @@ namespace ECMS.Context
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<SupplierProduct> SupplierProducts { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
-        
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<FacilitySupplier>()
@@ -42,16 +41,8 @@ namespace ECMS.Context
                 .WithMany(s => s.FacilitySuppliers)
                 .HasForeignKey(fs => fs.SupplierId)
                 .OnDelete(DeleteBehavior.Restrict);
-            
+
             base.OnModelCreating(modelBuilder);
-            
-            // Seed data
-            List<Address> addresses = AddressSeeder.Seed(modelBuilder);
-            List<Person> persons = PersonSeeder.Seed(modelBuilder);
-            List<Facility> facilities = FacilitySeeder.Seed(modelBuilder, addresses);
-            List<Customer> customers = CustomerSeeder.Seed(modelBuilder, persons);
-            List<Area> areas = AreaSeeder.Seed(modelBuilder, facilities);
         }
-        
     }
 }
