@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using ECMS.DTO;
 
 namespace ECMS.Controllers
 {
@@ -29,27 +30,32 @@ namespace ECMS.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateAddress(Address address)
+        public async Task<IActionResult> CreateAddress([FromBody] AddressDto addressDto)
         {
+            var address = new Address
+            {
+                City = addressDto.City,
+                Street = addressDto.Street,
+                BuildingNo = addressDto.BuildingNo
+            };
+
             var newAddress = await addressService.CreateAsync(address);
             return CreatedAtAction(nameof(GetAddressById), new { id = newAddress.Id }, newAddress);
         }
 
         [HttpPut("{addressId}")]
-        public async Task<IActionResult> UpdateAddress(int id, Address address)
+        public async Task<IActionResult> UpdateAddress(int id, [FromBody] AddressDto addressDto, CancellationToken token)
         {
-            if (id != address.Id)
-            {
-                return BadRequest();
-            }
-
-            var result = await addressService.UpdateAsync(address);
-            if (!result)
+            var existingAddress = await addressService.GetAddressAsync(id, token);
+            
+            if (existingAddress == null)
             {
                 return NotFound("Address not found.");
             }
 
-            return NoContent();
+            var updatedAddress = await addressService.UpdateAsync(existingAddress);
+            
+            return Ok(updatedAddress);
         }
 
         [HttpDelete("{addressId}")]
