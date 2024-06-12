@@ -30,6 +30,20 @@ namespace ECMS
 
             // Register the AddressService
             builder.Services.AddScoped<AddressService>();
+            builder.Services.AddScoped<FacilityService>();
+            builder.Services.AddScoped<AreaService>();
+
+            // Add CORS services
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                    });
+            });
 
             var app = builder.Build();
 
@@ -41,6 +55,9 @@ namespace ECMS
             }
 
             app.UseHttpsRedirection();
+
+            // Enable CORS
+            app.UseCors("AllowAllOrigins");
 
             app.UseAuthorization();
 
