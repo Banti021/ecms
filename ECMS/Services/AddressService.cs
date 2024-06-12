@@ -33,10 +33,11 @@ namespace ECMS.Services
             return address;
         }
 
-        public async Task<bool> UpdateAsync(Address address)
+        public async Task<Address> UpdateAsync(Address address)
         {
             _context.Addresses.Update(address);
-            return await _context.SaveChangesAsync() > 0;
+            await _context.SaveChangesAsync();
+            return address;
         }
 
         public async Task<bool> DeleteAsync(int addressId)

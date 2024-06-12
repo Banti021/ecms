@@ -8,7 +8,7 @@ namespace ECMS.Context
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
 
         public DbSet<Address> Addresses { get; set; }
-        public DbSet<Area> Areas { get; set; }
+        public DbSet<Area?> Areas { get; set; }
         public DbSet<AreaEvent> AreaEvents { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Department> Departments { get; set; }
