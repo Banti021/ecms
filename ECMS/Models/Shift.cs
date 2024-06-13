@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ECMS.Enums;
 
 namespace ECMS.Models
 {
@@ -10,7 +11,7 @@ namespace ECMS.Models
         public int Id { get; set; }
         
         [Required]
-        public int ShiftType { get; set; }
+        public ShiftType ShiftType { get; set; }
         
         [Required]
         public DateTime FromHour { get; set; }

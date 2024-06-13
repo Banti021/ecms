@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ECMS.Enums;
 
 namespace ECMS.Models
 {
@@ -16,7 +17,7 @@ namespace ECMS.Models
         public string Description { get; set; }
         
         [Required]
-        public int Category { get; set; }
+        public ProductType Category { get; set; }
         
         [Required]
         public int Price { get; set; }

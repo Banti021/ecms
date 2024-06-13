@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ECMS.Enums;
 
 namespace ECMS.Models
 {
@@ -13,7 +14,7 @@ namespace ECMS.Models
         public string Title { get; set; }
         
         [Required]
-        public int EventCategory { get; set; }
+        public EventCategory EventCategory { get; set; }
         
         [Required]
         [Column(TypeName = "decimal(18, 2)")]

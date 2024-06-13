@@ -1,4 +1,5 @@
 using ECMS.DTO;
+using ECMS.Enums;
 using Microsoft.AspNetCore.Mvc;
 using ECMS.Services;
 
@@ -59,7 +60,7 @@ namespace ECMS.Controllers
         
         
         [HttpGet("category/{category}")]
-        public async Task<IActionResult> GetEventsByCategory(int category, CancellationToken token)
+        public async Task<IActionResult> GetEventsByCategory(EventCategory category, CancellationToken token)
         {
             var events = await _service.GetEventsByCategoryAsync(category, token);
             return Ok(events);

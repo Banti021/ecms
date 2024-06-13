@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using ECMS.Enums;
 
 namespace ECMS.Services
 {
@@ -165,7 +166,7 @@ namespace ECMS.Services
             await _context.SaveChangesAsync();
         }
         
-        public async Task<List<EventDto>> GetEventsByCategoryAsync(int category, CancellationToken token)
+        public async Task<List<EventDto>> GetEventsByCategoryAsync(EventCategory category, CancellationToken token)
         {
             var events = await _context.Events.Where(e => e.EventCategory == category)
                 .Select(e => new EventDto

@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ECMS.Enums;
 
 namespace ECMS.Models
 {
@@ -16,10 +17,10 @@ namespace ECMS.Models
         public DateTime ReservationTo { get; set; }
         
         [Required]
-        public int Status { get; set; }
+        public ReservationStatus Status { get; set; }
         
         [Required]
-        public int Category { get; set; }
+        public ReservationCategory Category { get; set; }
         
         [Required]
         public int NumberOfGuests { get; set; }

@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ECMS.Enums;
 
 namespace ECMS.Models
 {
@@ -16,7 +17,7 @@ namespace ECMS.Models
         public DateTime OrderDate { get; set; }
         
         [Required]
-        public int Status { get; set; }
+        public OrderStatus Status { get; set; }
         
         public Decimal? TotalAmount { get; set; }
         
