@@ -16,7 +16,7 @@
               <router-link
                   v-for="facility in facilities"
                   :key="facility.id"
-                  :to="{ name: 'FacilityAreas', params: { id: facility.id } }"
+                  :to="{ name: 'FacilityAreas', params: { facilityId: facility.id } }"
                   class="bg-white rounded-lg shadow-lg p-6 block"
               >
                 <div class="bg-gray-200 h-40 rounded-t-lg mb-4 flex items-center justify-center">

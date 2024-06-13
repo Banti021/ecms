@@ -14,7 +14,12 @@
         <div class="container mx-auto p-4">
           <div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div v-for="area in areasForFacility" :key="area.id" class="bg-white rounded-lg shadow-lg p-6">
+              <router-link
+                  v-for="area in areasForFacility"
+                  :key="area.id"
+                  :to="{ name: 'AreaReservationDetailedView', params: { facilityId: facility.id, areaId: area.id } }"
+                  class="bg-white rounded-lg shadow-lg p-6 block"
+              >
                 <div class="bg-gray-200 h-40 rounded-t-lg mb-4 flex items-center justify-center">
                   <span class="text-gray-500">Image Placeholder</span>
                 </div>
@@ -22,7 +27,7 @@
                   <h2 class="text-xl font-semibold mb-2">{{ area.name }}</h2>
                   <p class="text-gray-700">{{ area.description }}</p>
                 </div>
-              </div>
+              </router-link>
             </div>
           </div>
         </div>
@@ -32,29 +37,30 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import BaseNavbar from '../components/BaseNavbar.vue';
-import { useAreas } from '../composables/useAreas';
-import { useFacilities } from '../composables/useFacilities';
+import {useAreas} from '../composables/useAreas';
+import {useFacilities} from '../composables/useFacilities';
 
 const route = useRoute();
 const facility = ref({});
 const areasError = ref(null);
 
-const { areasForFacility, fetchAreasForFacility } = useAreas();
+const {areasForFacility, fetchAreasForFacility} = useAreas();
 const {facility: fetchedFacility, fetchFacility} = useFacilities();
 
 const fetchFacilityDetails = async () => {
   try {
-    await fetchFacility(route.params.id);
+    await fetchFacility(route.params.facilityId);
     facility.value = fetchedFacility.value;
-    console.log('Facility Details', facility.value);
-    await fetchAreasForFacility(route.params.id);
+    await fetchAreasForFacility(route.params.facilityId);
   } catch (err) {
     areasError.value = err;
   }
 };
+
+watch(() => route.params.facilityId, fetchFacilityDetails);
 
 onMounted(fetchFacilityDetails);
 </script>

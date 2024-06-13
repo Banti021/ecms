@@ -19,13 +19,14 @@ export function useAreas() {
             console.error("API error", err);
             error.value = err;
         }
-    }
+    };
 
     const fetchArea = async (id) => {
         try {
             const response = await apiClient.get(`/Area/${id}`);
             area.value = response.data;
         } catch (err) {
+            console.error("API error", err);
             error.value = err;
         }
     };
