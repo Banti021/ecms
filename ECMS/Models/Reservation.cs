@@ -26,7 +26,7 @@ namespace ECMS.Models
         public int NumberOfGuests { get; set; }
         
         [Required]
-        public DateTime ConfirmedAt { get; set; }
+        public DateTime? ConfirmedAt { get; set; }
         
         public List<ReservationArea> ReservationAreas { get; set; }
     }
