@@ -1,10 +1,10 @@
 using ECMS.Models;
 
-namespace ECMS.DTO
+namespace ECMS.DTO.Supplier
 {
     public class AssignSupplierDto
     {
         public Facility FacilityId { get; set; }
-        public Supplier SupplierId { get; set; }
+        public Models.Supplier SupplierId { get; set; }
     }
 }
