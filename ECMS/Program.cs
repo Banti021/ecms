@@ -30,8 +30,18 @@ namespace ECMS
 
             // Register the AddressService
             builder.Services.AddScoped<AddressService>();
-            builder.Services.AddScoped<FacilityService>();
             builder.Services.AddScoped<AreaService>();
+            builder.Services.AddScoped<CustomerService>();
+            builder.Services.AddScoped<DepartmentService>();
+            builder.Services.AddScoped<EmployeeService>();
+            builder.Services.AddScoped<EventService>();
+            builder.Services.AddScoped<FacilityService>();
+            builder.Services.AddScoped<OrderService>();
+            builder.Services.AddScoped<ProductService>();
+            builder.Services.AddScoped<ReservationService>();
+            builder.Services.AddScoped<ShiftService>();
+            builder.Services.AddScoped<SupplierService>();
+            builder.Services.AddScoped<TicketService>();
 
             // Add CORS services
             builder.Services.AddCors(options =>
