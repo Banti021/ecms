@@ -7,47 +7,40 @@ namespace ECMS.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CustomerController : ControllerBase
+    public class CustomerController(CustomerService customerService) : ControllerBase
     {
-        private readonly CustomerService _customerService;
-
-        public CustomerController(CustomerService customerService)
-        {
-            _customerService = customerService;
-        }
-
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCustomer(int id, CancellationToken token)
         {
-            var customer = await _customerService.GetPersonByIdAsync(id, token);
+            var customer = await customerService.GetPersonByIdAsync(id, token);
             return Ok(customer);
         }
 
         [HttpGet]
         public async Task<IActionResult> GetCustomers(CancellationToken token)
         {
-            var customers = await _customerService.GetAllPersonsAsync(token);
+            var customers = await customerService.GetAllPersonsAsync(token);
             return Ok(customers);
         }
 
         [HttpPost]
         public async Task<IActionResult> AddCustomer([FromBody] CustomerDto customerDto)
         {
-            var customer = await _customerService.AddPersonAsync(customerDto);
+            var customer = await customerService.AddPersonAsync(customerDto);
             return Ok(customer);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCustomer(int id, [FromBody] CustomerDto customerDto)
         {
-            var customer = await _customerService.UpdatePersonAsync(id, customerDto);
+            var customer = await customerService.UpdatePersonAsync(id, customerDto);
             return Ok(customer);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomer(int id)
         {
-            await _customerService.DeletePersonAsync(id);
+            await customerService.DeletePersonAsync(id);
             return NoContent();
         }
     }
