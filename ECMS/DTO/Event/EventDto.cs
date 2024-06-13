@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using ECMS.Enums;
 
 namespace ECMS.DTO;
 
@@ -10,7 +11,7 @@ public class EventDto
     public string Title { get; set; }
         
     [Required]
-    public int EventCategory { get; set; }
+    public EventCategory EventCategory { get; set; }
         
     [Required]
     public Decimal RegularPrice { get; set; }
