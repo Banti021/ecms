@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ECMS.Enums;
 
 namespace ECMS.Models
 {
@@ -19,7 +20,7 @@ namespace ECMS.Models
         public String? SeatNumber { get; set; }
         
         [Required]
-        public int TicketType { get; set; }
+        public TicketType TicketType { get; set; }
         
         public List<EventCustomer> EventCustomers { get; set; }
     }
