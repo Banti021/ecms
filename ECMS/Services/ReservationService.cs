@@ -3,6 +3,7 @@ using ECMS.DTO.Reservation;
 using ECMS.Enums;
 using ECMS.Models;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace ECMS.Services;
 
@@ -18,7 +19,8 @@ public class ReservationService(ApplicationContext context)
             Status = r.Status,
             Category = r.Category,
             NumberOfGuests = r.NumberOfGuests,
-            ConfirmedAt = r.ConfirmedAt ?? DateTime.MinValue
+            ConfirmedAt = r.ConfirmedAt ?? DateTime.MinValue,
+            AdditionalInfo = r.AdditionalInfo
         }).ToListAsync(token);
     }
 
@@ -35,21 +37,24 @@ public class ReservationService(ApplicationContext context)
             Status = reservation.Status,
             Category = reservation.Category,
             NumberOfGuests = reservation.NumberOfGuests,
-            ConfirmedAt = reservation.ConfirmedAt ?? null
+            ConfirmedAt = reservation.ConfirmedAt ?? null,
+            AdditionalInfo = reservation.AdditionalInfo
         };
     }
 
     public async Task<ReservationDto> AddReservationAsync(MakeReservationDto reservationDto)
     {
+        Console.WriteLine($"ReservationDto: {JsonConvert.SerializeObject(reservationDto)}");
+
         var customer = await context.Customers
-                                     .Include(c => c.Reservations)
-                                     .FirstOrDefaultAsync(c => c.Id == reservationDto.CustomerId);
-        if (customer == null) throw new Exception("Customer not found");
+            .Include(c => c.Reservations)
+            .FirstOrDefaultAsync(c => c.Id == reservationDto.CustomerId);
+        if (customer == null) throw new Exception($"Customer with ID {reservationDto.CustomerId} not found");
 
         var area = await context.Areas
-                                 .Include(a => a.ReservationAreas)
-                                 .FirstOrDefaultAsync(a => a.Id == reservationDto.AreaId);
-        if (area == null) throw new Exception("Area not found");
+            .Include(a => a.ReservationAreas)
+            .FirstOrDefaultAsync(a => a.Id == reservationDto.AreaId);
+        if (area == null) throw new Exception($"Area with ID {reservationDto.AreaId} not found");
 
         var reservation = new Reservation
         {
@@ -59,7 +64,8 @@ public class ReservationService(ApplicationContext context)
             Category = reservationDto.Category,
             NumberOfGuests = reservationDto.NumberOfGuests,
             ConfirmedAt = null,
-            ReservationAreas = new List<ReservationArea>()
+            ReservationAreas = new List<ReservationArea>(),
+            AdditionalInfo = reservationDto.AdditionalInfo
         };
 
         var reservationArea = new ReservationArea
@@ -69,7 +75,6 @@ public class ReservationService(ApplicationContext context)
         };
 
         reservation.ReservationAreas.Add(reservationArea);
-
         customer.Reservations.Add(reservation);
 
         context.Reservations.Add(reservation);
@@ -83,7 +88,8 @@ public class ReservationService(ApplicationContext context)
             Status = reservation.Status,
             Category = reservation.Category,
             NumberOfGuests = reservation.NumberOfGuests,
-            ConfirmedAt = reservation.ConfirmedAt
+            ConfirmedAt = reservation.ConfirmedAt,
+            AdditionalInfo = reservation.AdditionalInfo
         };
     }
 
@@ -98,6 +104,7 @@ public class ReservationService(ApplicationContext context)
         reservation.Category = reservationDto.Category;
         reservation.NumberOfGuests = reservationDto.NumberOfGuests;
         reservation.ConfirmedAt = reservationDto.ConfirmedAt;
+        reservation.AdditionalInfo = reservationDto.AdditionalInfo;
 
         await context.SaveChangesAsync();
         return reservationDto;
