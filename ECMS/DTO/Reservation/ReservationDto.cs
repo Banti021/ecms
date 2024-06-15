@@ -24,4 +24,7 @@ public class ReservationDto
         
     [Required]
     public DateTime? ConfirmedAt { get; set; }
+    
+    [Required]
+    public string AdditionalInfo { get; set; }
 }

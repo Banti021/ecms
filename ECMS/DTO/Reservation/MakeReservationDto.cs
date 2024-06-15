@@ -1,8 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using ECMS.Enums;
-using ECMS.Models;
-
-namespace ECMS.DTO.Reservation;
 
 public class MakeReservationDto
 {
@@ -23,4 +20,7 @@ public class MakeReservationDto
     
     [Required]
     public int CustomerId { get; set; }
+
+    [Required]
+    public string AdditionalInfo { get; set; } // Add this line
 }

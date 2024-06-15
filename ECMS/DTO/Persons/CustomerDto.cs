@@ -5,7 +5,7 @@ namespace ECMS.DTO;
 public class CustomerDto : PersonDto
 {
     [Required]
-    public DateOnly? DateOfBirth { get; set; }
+    public DateOnly DateOfBirth { get; set; }
 
     [Required]
     public DateOnly JoinDate { get; set; }
