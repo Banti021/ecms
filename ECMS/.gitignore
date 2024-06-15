@@ -9,7 +9,6 @@ nupkg/
 .vscode/
 
 # Rider
-.idea/
 
 # Visual Studio
 .vs/
