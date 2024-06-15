@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ECMS.Models;
+using ECMS.Seeders;
 
 namespace ECMS.Context
 {
@@ -8,7 +9,7 @@ namespace ECMS.Context
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
 
         public DbSet<Address> Addresses { get; set; }
-        public DbSet<Area?> Areas { get; set; }
+        public DbSet<Area> Areas { get; set; }
         public DbSet<AreaEvent> AreaEvents { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Department> Departments { get; set; }
@@ -41,6 +42,15 @@ namespace ECMS.Context
                 .WithMany(s => s.FacilitySuppliers)
                 .HasForeignKey(fs => fs.SupplierId)
                 .OnDelete(DeleteBehavior.Restrict);
+            
+            AddressSeeder.Seed(modelBuilder);
+            PersonSeeder.Seed(modelBuilder);
+            CustomerSeeder.Seed(modelBuilder);
+            FacilitySeeder.Seed(modelBuilder);
+            AreaSeeder.Seed(modelBuilder);
+            ShiftSeeder.Seed(modelBuilder);
+            DepartmentSeeder.Seed(modelBuilder);
+            EmployeeSeeder.Seed(modelBuilder);
 
             base.OnModelCreating(modelBuilder);
         }
