@@ -23,15 +23,6 @@
         </div>
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">
-            <button
-                type="button"
-                class="relative rounded-full bg-indigo-600 p-1 text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
-            >
-              <span class="absolute -inset-1.5" />
-              <span class="sr-only">View notifications</span>
-              <BellIcon class="h-6 w-6" aria-hidden="true" />
-            </button>
-
             <!-- Profile dropdown -->
             <Menu as="div" class="relative ml-3">
               <div>
@@ -40,6 +31,7 @@
                 >
                   <span class="absolute -inset-1.5" />
                   <span class="sr-only">Open user menu</span>
+                  <div class="text-white text-sm font-medium mr-2">{{ user.name }}</div>
                   <img class="h-8 w-8 rounded-full" :src="user.imageUrl" alt="" />
                 </MenuButton>
               </div>
@@ -54,9 +46,19 @@
                 <MenuItems
                     class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                 >
-                  <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
-                    <router-link :to="item.href" class="block px-4 py-2 text-sm text-gray-700" :class="{ 'bg-gray-100': active }"
+                  <MenuItem v-for="item in filteredUserNavigation" :key="item.name" v-slot="{ active }">
+                    <router-link
+                        :to="item.href"
+                        class="block px-4 py-2 text-sm text-gray-700"
+                        :class="{ 'bg-gray-100': active }"
                     >{{ item.name }}</router-link>
+                  </MenuItem>
+                  <MenuItem v-slot="{ active }">
+                    <button
+                        @click="handleSignOut"
+                        class="block w-full text-left px-4 py-2 text-sm text-gray-700"
+                        :class="{ 'bg-gray-100': active }"
+                    >Sign out</button>
                   </MenuItem>
                 </MenuItems>
               </transition>
@@ -112,12 +114,16 @@
         </div>
         <div class="mt-3 space-y-1 px-2">
           <DisclosureButton
-              v-for="item in userNavigation"
+              v-for="item in filteredUserNavigation"
               :key="item.name"
               as="router-link"
               :to="item.href"
               class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-indigo-500 hover:bg-opacity-75"
           >{{ item.name }}</DisclosureButton>
+          <DisclosureButton
+              @click="handleSignOut"
+              class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-indigo-500 hover:bg-opacity-75"
+          >Sign out</DisclosureButton>
         </div>
       </div>
     </DisclosurePanel>
@@ -125,11 +131,14 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline';
 import { useRoute } from 'vue-router';
+import { useAuthStore } from '../store/auth';
 
 const route = useRoute();
+const authStore = useAuthStore();
 
 const user = {
   name: 'Tom Cook',
@@ -151,7 +160,15 @@ const userNavigation = [
   {name: 'Sign out', href: '/sign-out'},
 ];
 
+const filteredUserNavigation = computed(() => {
+  return userNavigation.filter(item => item.name !== 'Sign out');
+});
+
 const isActiveRoute = (href) => {
   return route.path === href;
+};
+
+const handleSignOut = () => {
+  authStore.logout();
 };
 </script>

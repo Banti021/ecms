@@ -2,11 +2,15 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import './index.css';
 import router from './router';
-import axiosPlugin from './plugins/axios';
+import { createPinia } from 'pinia';
+import apiClient from './plugins/apiClient';
 
 const app = createApp(App);
 
+const pinia = createPinia();
+
+app.use(pinia);
 app.use(router);
-app.use(axiosPlugin);
+app.use(apiClient);
 
 app.mount('#app');

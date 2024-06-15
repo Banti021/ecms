@@ -33,7 +33,7 @@ export function useReservations() {
     const addReservation = async (reservationData) => {
         try {
             console.log('Adding reservation:', reservationData);
-            const response = await apiClient.post('/Reservation', reservationData); // Ensure the endpoint matches the backend route
+            const response = await apiClient.post('/Reservation', reservationData);
             return response.data;
         } catch (err) {
             console.error('Failed to add reservation:', err);

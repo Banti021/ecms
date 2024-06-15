@@ -1,7 +1,6 @@
 using ECMS.Context;
 using ECMS.DTO.Auth;
 using ECMS.Models;
-using ECMS.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
@@ -14,13 +13,11 @@ namespace ECMS.Controllers
     public class AuthController : ControllerBase
     {
         private readonly ApplicationContext _context;
-        private readonly JwtTokenGenerator _tokenGenerator;
         private readonly PasswordHasher<Person> _passwordHasher;
 
-        public AuthController(ApplicationContext context, JwtTokenGenerator tokenGenerator)
+        public AuthController(ApplicationContext context)
         {
             _context = context;
-            _tokenGenerator = tokenGenerator;
             _passwordHasher = new PasswordHasher<Person>();
         }
 
@@ -31,18 +28,16 @@ namespace ECMS.Controllers
                 .FirstOrDefaultAsync(u => u.UserName == request.UserName);
 
             if (person == null || _passwordHasher.VerifyHashedPassword(person, person.PasswordHash, request.Password) == PasswordVerificationResult.Failed)
-                return Unauthorized();
-
-            var token = _tokenGenerator.GenerateToken(person);
-
-            return Ok(new { Token = token });
+                return Unauthorized(new { message = "Invalid username or password" });
+            
+            return Ok(person);
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequest request)
         {
             if (await _context.Persons.AnyAsync(u => u.UserName == request.UserName))
-                return BadRequest("Username already exists");
+                return BadRequest(new { message = "Username already exists" });
 
             var person = new Person
             {
@@ -51,26 +46,14 @@ namespace ECMS.Controllers
                 UserName = request.UserName,
                 PhoneNumber = request.PhoneNumber,
                 Email = request.Email,
-                Role = request.Role
-            };
-
-            person.PasswordHash = _passwordHasher.HashPassword(person, request.Password);
-
-            var customer = new Customer
-            {
-                Person = person,
-                DateOfBirth = request.DateOfBirth,
-                JoinDate = DateTime.Now,
-                LastVisit = DateTime.Now
+                Role = request.Role,
+                PasswordHash = _passwordHasher.HashPassword(null, request.Password)
             };
 
             _context.Persons.Add(person);
-            _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
-
-            var token = _tokenGenerator.GenerateToken(person);
-
-            return Ok(new { Token = token });
+            
+            return Ok(person);
         }
     }
 }

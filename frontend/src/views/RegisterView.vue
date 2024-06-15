@@ -28,10 +28,7 @@
       </div>
       <div class="mb-4">
         <label for="role" class="block text-sm font-medium text-gray-700">Role</label>
-        <select v-model="role" id="role" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
-          <option value="Customer">Customer</option>
-          <option value="Employee">Employee</option>
-        </select>
+        <input type="text" v-model="role" id="role" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
       </div>
       <div v-if="error" class="mb-4 text-red-500">
         {{ error }}
@@ -47,8 +44,8 @@
 </template>
 
 <script setup>
-import {ref} from 'vue';
-import {useAuth} from '../composables/useAuth';
+import { ref } from 'vue';
+import { useAuthStore } from '../store/auth';
 
 const firstName = ref('');
 const lastName = ref('');
@@ -56,11 +53,12 @@ const username = ref('');
 const password = ref('');
 const phoneNumber = ref('');
 const email = ref('');
-const role = ref('Customer');
-const {register, error} = useAuth();
+const role = ref('');
+const error = ref(null);
+const authStore = useAuthStore();
 
 const registerUser = async () => {
-  await register({
+  await authStore.register({
     firstName: firstName.value,
     lastName: lastName.value,
     username: username.value,
@@ -69,5 +67,8 @@ const registerUser = async () => {
     email: email.value,
     role: role.value,
   });
+  if (authStore.error) {
+    error.value = authStore.error;
+  }
 };
 </script>

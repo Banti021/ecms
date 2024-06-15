@@ -25,13 +25,17 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useAuth } from '../composables/useAuth';
+import { useAuthStore } from '../store/auth';
 
 const username = ref('');
 const password = ref('');
-const { login, error } = useAuth();
+const error = ref(null);
+const authStore = useAuthStore();
 
 const loginUser = async () => {
-  await login({ username: username.value, password: password.value });
+  await authStore.login({ username: username.value, password: password.value });
+  if (authStore.error) {
+    error.value = authStore.error;
+  }
 };
 </script>

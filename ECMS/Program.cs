@@ -31,7 +31,6 @@ namespace ECMS
             builder.Services.AddSwaggerGen();
 
             // Register the services
-            builder.Services.AddScoped<JwtTokenGenerator>();
             builder.Services.AddScoped<AddressService>();
             builder.Services.AddScoped<AreaService>();
             builder.Services.AddScoped<CustomerService>();
