@@ -72,7 +72,7 @@
                   <button
                       type="button"
                       class="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                      @click="closeModal"
+                      @click="closeModalAndRedirect"
                   >
                     Close
                   </button>
@@ -90,13 +90,15 @@
 import { ref, watch, defineProps } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { CheckIcon } from '@heroicons/vue/24/outline'
-import { useRoute } from 'vue-router'
+// import { useRoute, useRouter } from 'vue-router'
 import { useReservations } from '../composables/useReservations'
 
 const props = defineProps({
   open: Boolean,
   selectedDate: String,
   selectedSlot: String,
+  areaId: Number,
+  customerId: Number,
   onClose: Function
 })
 
@@ -108,36 +110,44 @@ const additionalInfo = ref('')
 const reserveError = ref(null)
 
 const { addReservation } = useReservations()
-const route = useRoute()
+// const route = useRoute()
+// const router = useRouter()
 
 const reserveArea = async () => {
-  reserveError.value = null
-  const reservationFrom = new Date(`${props.selectedDate}T${props.selectedSlot.split(' - ')[0]}:00`)
-  const reservationTo = new Date(`${props.selectedDate}T${props.selectedSlot.split(' - ')[1]}:00`)
+  reserveError.value = null;
+  const [start, end] = props.selectedSlot.split(' - ').map(time => {
+    const [hours, minutes] = time.split(':');
+    const date = new Date(props.selectedDate);
+    date.setHours(hours);
+    date.setMinutes(minutes);
+    return date;
+  });
+
+  const reservationDto = {
+    ReservationFrom: start.toISOString(),
+    ReservationTo: end.toISOString(),
+    Category: 1,
+    NumberOfGuests: guestNumber.value,
+    AreaId: props.areaId,
+    CustomerId: props.customerId,
+    AdditionalInfo: additionalInfo.value
+  };
 
   try {
-    await addReservation({
-      ReservationFrom: reservationFrom,
-      ReservationTo: reservationTo,
-      Category: 'General', // Example category
-      NumberOfGuests: guestNumber.value,
-      AreaId: route.params.areaId,
-      CustomerId: 1, // Example customer ID
-      Email: email.value,
-      AdditionalInfo: additionalInfo.value
-    })
-    reservationSuccess.value = true
+    await addReservation(reservationDto);
+    reservationSuccess.value = true;
   } catch (err) {
-    reserveError.value = 'Failed to reserve the area.'
+    reserveError.value = 'Failed to reserve the area.';
   }
-}
+};
 
-const closeModal = () => {
-  open.value = false
-  props.onClose()
-}
+const closeModalAndRedirect = () => {
+  open.value = false;
+  props.onClose();
+  // router.push({ name: 'Profile' });
+};
 
 watch(() => props.open, (newVal) => {
-  open.value = newVal
+  open.value = newVal;
 })
 </script>

@@ -67,7 +67,14 @@
         </div>
       </div>
     </main>
-    <ReservationFormModal :open="isReservationModalOpen" @close="isReservationModalOpen = false" :selectedDate="selectedDate" :selectedSlot="selectedSlot" />
+    <ReservationFormModal
+        :open="isReservationModalOpen"
+        @close="isReservationModalOpen = false"
+        :selectedDate="selectedDate"
+        :selectedSlot="selectedSlot"
+        :areaId="route.params.areaId"
+        :customerId="1"
+    />
   </div>
 </template>
 
@@ -104,6 +111,7 @@ const selectSlot = (slot) => {
 };
 
 const openReservationModal = () => {
+  reserveError.value = null;
   if (!selectedDate.value) {
     reserveError.value = 'Please select a date.';
     return;
@@ -112,7 +120,6 @@ const openReservationModal = () => {
     reserveError.value = 'Please select a time slot.';
     return;
   }
-  console.log('Opening reservation modal...');
   isReservationModalOpen.value = true;
 };
 

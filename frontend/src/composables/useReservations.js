@@ -12,36 +12,41 @@ export function useReservations() {
 
     const fetchReservations = async () => {
         try {
-            const response = await apiClient.get('/api/Reservation');
+            const response = await apiClient.get('/Reservation');
             reservations.value = response.data;
         } catch (err) {
+            console.error('Error fetching reservations:', err);
             error.value = err;
         }
     };
 
     const fetchReservationById = async (id) => {
         try {
-            const response = await apiClient.get(`/api/Reservation/${id}`);
+            const response = await apiClient.get(`/Reservation/${id}`);
             reservation.value = response.data;
         } catch (err) {
+            console.error('Error fetching reservation by ID:', err);
             error.value = err;
         }
     };
 
     const addReservation = async (reservationData) => {
         try {
-            const response = await apiClient.post('/api/reservation', reservationData)
-            return response.data
-        } catch (error) {
-            throw new Error('Failed to add reservation')
+            console.log('Adding reservation:', reservationData);
+            const response = await apiClient.post('/Reservation', reservationData); // Ensure the endpoint matches the backend route
+            return response.data;
+        } catch (err) {
+            console.error('Failed to add reservation:', err);
+            throw new Error('Failed to add reservation');
         }
-    }
+    };
 
     const updateReservation = async (id, reservationDto) => {
         try {
-            const response = await apiClient.put(`/api/Reservation/${id}`, reservationDto);
+            const response = await apiClient.put(`/Reservation/${id}`, reservationDto);
             return response.data;
         } catch (err) {
+            console.error('Error updating reservation:', err);
             error.value = err;
             throw err;
         }
@@ -49,8 +54,9 @@ export function useReservations() {
 
     const deleteReservation = async (id) => {
         try {
-            await apiClient.delete(`/api/Reservation/${id}`);
+            await apiClient.delete(`/Reservation/${id}`);
         } catch (err) {
+            console.error('Error deleting reservation:', err);
             error.value = err;
             throw err;
         }
@@ -58,9 +64,10 @@ export function useReservations() {
 
     const getReservationsByStatus = async (status) => {
         try {
-            const response = await apiClient.get(`/api/Reservation/status/${status}`);
+            const response = await apiClient.get(`/Reservation/status/${status}`);
             reservations.value = response.data;
         } catch (err) {
+            console.error('Error getting reservations by status:', err);
             error.value = err;
             throw err;
         }
@@ -68,8 +75,9 @@ export function useReservations() {
 
     const confirmReservation = async (id) => {
         try {
-            await apiClient.post(`/api/Reservation/confirm/${id}`);
+            await apiClient.post(`/Reservation/confirm/${id}`);
         } catch (err) {
+            console.error('Error confirming reservation:', err);
             error.value = err;
             throw err;
         }
@@ -77,8 +85,9 @@ export function useReservations() {
 
     const cancelReservation = async (id) => {
         try {
-            await apiClient.post(`/api/Reservation/cancel/${id}`);
+            await apiClient.post(`/Reservation/cancel/${id}`);
         } catch (err) {
+            console.error('Error cancelling reservation:', err);
             error.value = err;
             throw err;
         }
@@ -86,8 +95,9 @@ export function useReservations() {
 
     const completeReservation = async (id) => {
         try {
-            await apiClient.post(`/api/Reservation/complete/${id}`);
+            await apiClient.post(`/Reservation/complete/${id}`);
         } catch (err) {
+            console.error('Error completing reservation:', err);
             error.value = err;
             throw err;
         }
