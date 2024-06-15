@@ -28,7 +28,7 @@ namespace ECMS
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            // Register the AddressService
+            // Register the services
             builder.Services.AddScoped<AddressService>();
             builder.Services.AddScoped<AreaService>();
             builder.Services.AddScoped<CustomerService>();
@@ -55,6 +55,12 @@ namespace ECMS
             });
 
             var app = builder.Build();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
+                dbContext.Database.Migrate();
+            }
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
