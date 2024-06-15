@@ -28,4 +28,3 @@ namespace ECMS.Models
         public Customer Customer { get; set; }
     } 
 }
-

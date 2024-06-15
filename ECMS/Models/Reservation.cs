@@ -9,26 +9,26 @@ namespace ECMS.Models
     {
         [Key]
         public int Id { get; set; }
-        
+
         [Required]
         public DateTime ReservationFrom { get; set; }
-        
+
         [Required]
         public DateTime ReservationTo { get; set; }
-        
+
         [Required]
         public ReservationStatus Status { get; set; }
-        
+
         [Required]
         public ReservationCategory Category { get; set; }
-        
+
         [Required]
         public int NumberOfGuests { get; set; }
-        
-        [Required]
+
         public DateTime? ConfirmedAt { get; set; }
         
+        public string AdditionalInfo { get; set; }
+
         public List<ReservationArea> ReservationAreas { get; set; }
     }
 }
-

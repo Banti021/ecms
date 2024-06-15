@@ -6,15 +6,14 @@ namespace ECMS.Models
     [Table("customers")]
     public class Customer
     {
-        [Required]
-        [ForeignKey("Person")]
+        [Key]
         public int Id { get; set; }
         
         [Required]
         public int PersonId { get; set; }
         
         [Required]
-        public DateOnly? DateOfBirth { get; set; }
+        public DateOnly DateOfBirth { get; set; }
         
         [Required]
         public DateOnly JoinDate { get; set; }
@@ -22,7 +21,9 @@ namespace ECMS.Models
         [Required]
         public DateOnly LastVisit { get; set; }
         
+        [ForeignKey("PersonId")]
         public Person Person { get; set; }
+        
         public List<Order> Orders { get; set; }
         public List<Reservation> Reservations { get; set; }
     }
