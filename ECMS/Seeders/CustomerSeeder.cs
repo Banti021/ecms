@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using ECMS.Models;
 using Bogus;
+using System;
+using System.Collections.Generic;
 
 namespace ECMS.Seeders
 {
@@ -17,9 +19,9 @@ namespace ECMS.Seeders
                 {
                     Id = i,
                     PersonId = i,
-                    DateOfBirth = DateOnly.FromDateTime(faker.Date.Past(30, DateTime.Now.AddYears(-18))),
-                    JoinDate = DateOnly.FromDateTime(faker.Date.Past(5)),
-                    LastVisit = DateOnly.FromDateTime(faker.Date.Recent(30))
+                    DateOfBirth = faker.Date.Past(30, DateTime.Now.AddYears(-18)),
+                    JoinDate = faker.Date.Past(5),
+                    LastVisit = faker.Date.Recent(30)
                 });
             }
 

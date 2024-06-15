@@ -2,7 +2,9 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using ECMS.Context;
 using ECMS.Services;
+using ECMS.Utils;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ECMS
 {
@@ -29,6 +31,7 @@ namespace ECMS
             builder.Services.AddSwaggerGen();
 
             // Register the services
+            builder.Services.AddScoped<JwtTokenGenerator>();
             builder.Services.AddScoped<AddressService>();
             builder.Services.AddScoped<AreaService>();
             builder.Services.AddScoped<CustomerService>();

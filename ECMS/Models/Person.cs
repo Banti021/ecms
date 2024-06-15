@@ -8,23 +8,31 @@ namespace ECMS.Models
     {
         [Key]
         public int Id { get; set; }
-        
-        [Required, StringLength(100)]
+
+        [Required]
         public string FirstName { get; set; }
-        
-        [Required, StringLength(100)]
+
+        [Required]
         public string LastName { get; set; }
-        
-        [StringLength(100)]
-        public string? Email { get; set; }
-        
-        [StringLength(50)]
+
+        [Required]
+        public string UserName { get; set; }
+
+        [Required]
+        public string PasswordHash { get; set; }
+
+        [Required]
+        public string Role { get; set; }
+
+        public string Email { get; set; }
+
+        [Required]
         public string PhoneNumber { get; set; }
-        
+
         [InverseProperty("Person")]
         public Employee Employee { get; set; }
-        
+
         [InverseProperty("Person")]
         public Customer Customer { get; set; }
-    } 
+    }
 }

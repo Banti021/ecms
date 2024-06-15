@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,13 +14,13 @@ namespace ECMS.Models
         public int PersonId { get; set; }
         
         [Required]
-        public DateOnly DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         
         [Required]
-        public DateOnly JoinDate { get; set; }
+        public DateTime JoinDate { get; set; }
         
         [Required]
-        public DateOnly LastVisit { get; set; }
+        public DateTime LastVisit { get; set; }
         
         [ForeignKey("PersonId")]
         public Person Person { get; set; }

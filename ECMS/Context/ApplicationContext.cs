@@ -31,6 +31,23 @@ namespace ECMS.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Person>()
+                .HasOne(p => p.Employee)
+                .WithOne(e => e.Person)
+                .HasForeignKey<Employee>(e => e.PersonId);
+
+            modelBuilder.Entity<Person>()
+                .HasOne(p => p.Customer)
+                .WithOne(c => c.Person)
+                .HasForeignKey<Customer>(c => c.PersonId);
+
+            modelBuilder.Entity<Order>(entity =>
+            {
+                entity.Property(e => e.TotalAmount).HasColumnType("decimal(18, 2)");
+            });
+
             modelBuilder.Entity<FacilitySupplier>()
                 .HasOne(fs => fs.Facility)
                 .WithMany(f => f.FacilitySuppliers)
@@ -42,17 +59,12 @@ namespace ECMS.Context
                 .WithMany(s => s.FacilitySuppliers)
                 .HasForeignKey(fs => fs.SupplierId)
                 .OnDelete(DeleteBehavior.Restrict);
-            
+
             AddressSeeder.Seed(modelBuilder);
-            PersonSeeder.Seed(modelBuilder);
-            CustomerSeeder.Seed(modelBuilder);
             FacilitySeeder.Seed(modelBuilder);
             AreaSeeder.Seed(modelBuilder);
             ShiftSeeder.Seed(modelBuilder);
             DepartmentSeeder.Seed(modelBuilder);
-            EmployeeSeeder.Seed(modelBuilder);
-
-            base.OnModelCreating(modelBuilder);
         }
     }
 }

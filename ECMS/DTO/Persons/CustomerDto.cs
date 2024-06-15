@@ -5,11 +5,11 @@ namespace ECMS.DTO;
 public class CustomerDto : PersonDto
 {
     [Required]
-    public DateOnly DateOfBirth { get; set; }
+    public DateTime DateOfBirth { get; set; }
 
     [Required]
-    public DateOnly JoinDate { get; set; }
+    public DateTime JoinDate { get; set; }
 
     [Required]
-    public DateOnly LastVisit { get; set; }
+    public DateTime LastVisit { get; set; }
 }
