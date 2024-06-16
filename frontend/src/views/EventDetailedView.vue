@@ -2,6 +2,7 @@
 import { ref, onMounted, computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { useEvents } from '../composables/useEvents';
+import BaseNavbar from '../components/BaseNavbar.vue';
 
 // Event categories mapping
 const eventCategories = {
@@ -17,7 +18,7 @@ const route = useRoute();
 const { event, fetchEvent, error } = useEvents();
 
 const ticketQuantity = ref(1);
-const ticketType = ref('regular'); // 'regular' or 'vip'
+const ticketType = ref('regular');
 
 onMounted(() => {
   fetchEvent(route.params.eventId);
@@ -34,6 +35,7 @@ const buyTicket = () => {
 </script>
 
 <template>
+  <BaseNavbar />
   <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="md:col-span-2">
       <div v-if="error" class="text-red-500 mb-4">
