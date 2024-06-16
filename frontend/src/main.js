@@ -13,4 +13,9 @@ app.use(pinia);
 app.use(router);
 app.use(apiClient);
 
+const token = localStorage.getItem('token');
+if (token) {
+    apiClient.apiClient.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+}
+
 app.mount('#app');

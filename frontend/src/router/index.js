@@ -5,6 +5,7 @@ import ReservationView from '../views/ReservationView.vue';
 import EventsView from '../views/EventsView.vue';
 import EventDetailedView from '../views/EventDetailedView.vue';
 import FacilityAreasView from '../views/FacilityAreasView.vue';
+import UserProfile from '../views/UserProfile.vue';
 const AreaReservationDetailedView = () => import('../views/AreaReservationDetailedView.vue');
 const LoginView = () => import('../views/LoginView.vue');
 const RegisterView = () => import('../views/RegisterView.vue');
@@ -39,6 +40,11 @@ const routes = [
         path: '/events/:eventId',
         name: 'EventDetailedView',
         component: EventDetailedView,
+    },
+    {
+        path: '/profile',
+        name: 'UserProfile',
+        component: UserProfile,
     },
     {
         path: '/login',

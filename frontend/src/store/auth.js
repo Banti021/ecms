@@ -1,20 +1,37 @@
+// src/store/auth.js
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { ref, inject } from 'vue';
 import { useRouter } from 'vue-router';
-import apiClient from '../plugins/apiClient';
 
 export const useAuthStore = defineStore('auth', () => {
     const router = useRouter();
+    const apiClient = inject('apiClient');
+    if (!apiClient) {
+        throw new Error('API client is not provided');
+    }
+
     const user = ref(null);
     const error = ref(null);
     const isAuthenticated = ref(false);
 
+    const fetchUser = async () => {
+        try {
+            const response = await apiClient.get('/auth/me');
+            user.value = response.data;
+        } catch (err) {
+            console.error('Failed to fetch user data', err);
+            logout();
+        }
+    };
+
     const login = async (credentials) => {
         try {
-            const response = await apiClient.post('/Auth/login', credentials);
-            user.value = response.data;
+            const response = await apiClient.post('/auth/login', credentials);
+            user.value = response.data.user;
             error.value = null;
             isAuthenticated.value = true;
+            localStorage.setItem('token', response.data.token); // Store token in local storage
+            apiClient.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
             router.push({ name: 'Home' });
         } catch (err) {
             console.error('API error', err);
@@ -24,10 +41,12 @@ export const useAuthStore = defineStore('auth', () => {
 
     const register = async (userData) => {
         try {
-            const response = await apiClient.post('/Auth/register', userData);
-            user.value = response.data;
+            const response = await apiClient.post('/auth/register', userData);
+            user.value = response.data.user;
             error.value = null;
             isAuthenticated.value = true;
+            localStorage.setItem('token', response.data.token); // Store token in local storage
+            apiClient.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
             router.push({ name: 'Home' });
         } catch (err) {
             console.error('API error', err);
@@ -38,6 +57,8 @@ export const useAuthStore = defineStore('auth', () => {
     const logout = () => {
         user.value = null;
         isAuthenticated.value = false;
+        localStorage.removeItem('token'); // Remove token from local storage
+        delete apiClient.defaults.headers.common['Authorization'];
         router.push({ name: 'Login' });
     };
 
@@ -47,6 +68,7 @@ export const useAuthStore = defineStore('auth', () => {
         login,
         register,
         logout,
+        fetchUser,
         isAuthenticated,
     };
 });

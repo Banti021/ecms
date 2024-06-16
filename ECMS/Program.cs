@@ -1,10 +1,13 @@
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using ECMS.Context;
 using ECMS.Services;
 using ECMS.Utils;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ECMS
 {
@@ -43,6 +46,7 @@ namespace ECMS
             builder.Services.AddScoped<ReservationService>();
             builder.Services.AddScoped<ShiftService>();
             builder.Services.AddScoped<SupplierService>();
+            builder.Services.AddScoped<TicketService>();
 
             // Add CORS services
             builder.Services.AddCors(options =>
@@ -55,6 +59,22 @@ namespace ECMS
                                .AllowAnyHeader();
                     });
             });
+            
+            // Add Authentication services
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                        ValidAudience = builder.Configuration["Jwt:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                    };
+                });
 
             var app = builder.Build();
 
@@ -76,6 +96,7 @@ namespace ECMS
             // Enable CORS
             app.UseCors("AllowAllOrigins");
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();
