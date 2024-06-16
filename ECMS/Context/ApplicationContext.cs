@@ -61,6 +61,7 @@ namespace ECMS.Context
                 .OnDelete(DeleteBehavior.Restrict);
 
             AddressSeeder.Seed(modelBuilder);
+            EventSeeder.Seed(modelBuilder);
             FacilitySeeder.Seed(modelBuilder);
             AreaSeeder.Seed(modelBuilder);
             ShiftSeeder.Seed(modelBuilder);
