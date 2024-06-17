@@ -22,6 +22,13 @@ namespace ECMS.Controllers
             var employees = await employeeService.GetAllPersonsAsync(token);
             return Ok(employees);
         }
+        
+        [HttpGet("department/{departmentId}")]
+        public async Task<IActionResult> GetEmployeesResposibleForArea(int departmentId, CancellationToken token)
+        {
+            var employees = await employeeService.GetEmployeesResposibleForArea(departmentId, token);
+            return Ok(employees);
+        }
 
         [HttpPost]
         public async Task<IActionResult> AddEmployee([FromBody] EmployeeDto employeeDto)

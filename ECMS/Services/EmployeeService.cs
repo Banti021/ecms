@@ -120,5 +120,10 @@ namespace ECMS.Services
             _context.Persons.Remove(employee.Person);
             await _context.SaveChangesAsync();
         }
+        
+        public async Task<List<Employee>> GetEmployeesResposibleForArea(int departmentId, CancellationToken token)
+        {
+            return await _context.Employees.Where(e => e.DepartmentId == departmentId).ToListAsync(token);
+        }
     }
 }
