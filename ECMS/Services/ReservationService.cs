@@ -11,7 +11,7 @@ public class ReservationService(ApplicationContext context)
 {
     public async Task<List<ReservationDto>> GetAllReservationsAsync(CancellationToken token)
     {
-        return await context.Reservations.Select(r => new ReservationDto
+        var reservations = await context.Reservations.Select(r => new ReservationDto
         {
             Id = r.Id,
             ReservationFrom = r.ReservationFrom,
@@ -22,6 +22,11 @@ public class ReservationService(ApplicationContext context)
             ConfirmedAt = r.ConfirmedAt ?? DateTime.MinValue,
             AdditionalInfo = r.AdditionalInfo
         }).ToListAsync(token);
+            
+        // Update the total reservations count
+        await Reservation.CalculateTotalReservations(context);
+            
+        return reservations;
     }
 
     public async Task<ReservationDto> GetReservationByIdAsync(int id, CancellationToken token)
@@ -79,6 +84,8 @@ public class ReservationService(ApplicationContext context)
 
         context.Reservations.Add(reservation);
         await context.SaveChangesAsync();
+        
+        await Reservation.CalculateTotalReservations(context);
 
         return new ReservationDto
         {
@@ -105,8 +112,11 @@ public class ReservationService(ApplicationContext context)
         reservation.NumberOfGuests = reservationDto.NumberOfGuests;
         reservation.ConfirmedAt = reservationDto.ConfirmedAt;
         reservation.AdditionalInfo = reservationDto.AdditionalInfo;
-
+        
         await context.SaveChangesAsync();
+        
+        await Reservation.CalculateTotalReservations(context);
+        
         return reservationDto;
     }
 
@@ -117,6 +127,9 @@ public class ReservationService(ApplicationContext context)
 
         context.Reservations.Remove(reservation);
         await context.SaveChangesAsync();
+            
+        // Update the total reservations count
+        await Reservation.CalculateTotalReservations(context);
     }
 
     public async Task ConfirmReservationAsync(int id)
@@ -128,6 +141,9 @@ public class ReservationService(ApplicationContext context)
         reservation.ConfirmedAt = DateTime.Now;
 
         await context.SaveChangesAsync();
+            
+        // Update the total reservations count
+        await Reservation.CalculateTotalReservations(context);
     }
 
     public async Task CancelReservationAsync(int id)
@@ -138,6 +154,9 @@ public class ReservationService(ApplicationContext context)
         reservation.Status = ReservationStatus.Cancelled;
 
         await context.SaveChangesAsync();
+            
+        // Update the total reservations count
+        await Reservation.CalculateTotalReservations(context);
     }
 
     public async Task CompleteReservationAsync(int id)
@@ -148,11 +167,14 @@ public class ReservationService(ApplicationContext context)
         reservation.Status = ReservationStatus.Completed;
 
         await context.SaveChangesAsync();
+            
+        // Update the total reservations count
+        await Reservation.CalculateTotalReservations(context);
     }
 
     public async Task<List<ReservationDto>> GetReservationsByStatusAsync(ReservationStatus status, CancellationToken token)
     {
-        return await context.Reservations
+        var reservations = await context.Reservations
             .Where(r => r.Status == status)
             .Select(r => new ReservationDto
             {
@@ -164,10 +186,9 @@ public class ReservationService(ApplicationContext context)
                 NumberOfGuests = r.NumberOfGuests,
                 ConfirmedAt = r.ConfirmedAt ?? DateTime.MinValue
             }).ToListAsync(token);
-    }
-    
-    public async Task<int> CalculateTotalReservationsAsync()
-    {
-        return await Reservation.CalculateTotalReservations(context);
+        
+        await Reservation.CalculateTotalReservations(context);
+            
+        return reservations;
     }
 }

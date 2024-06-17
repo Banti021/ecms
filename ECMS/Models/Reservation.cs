@@ -33,9 +33,11 @@ namespace ECMS.Models
 
         public List<ReservationArea> ReservationAreas { get; set; }
         
-        public static async Task<int> CalculateTotalReservations(ApplicationContext context)
+        public static int TotalReservations { get; private set; }
+        
+        public static async Task CalculateTotalReservations(ApplicationContext context)
         {
-            return await context.Reservations.CountAsync();
+            TotalReservations = await context.Reservations.CountAsync();
         }
     }
 }
