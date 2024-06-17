@@ -19,7 +19,15 @@ namespace ECMS.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAreas(CancellationToken token)
         {
-            var areas = await _areaService.GetAreas(token);
+            var areas = await _areaService.GetAreaList(token);
+            return Ok(areas);
+        }
+        
+        [HttpGet("facility/{facilityId}")]
+        public async Task<IActionResult> GetAreasByFacility(int facilityId, CancellationToken token)
+        {
+            var areas = await _areaService.GetAreaList(facilityId, token);
+
             return Ok(areas);
         }
 
@@ -77,15 +85,11 @@ namespace ECMS.Controllers
             return NoContent();
         }
         
-        [HttpGet("facility/{facilityId}")]
-        public async Task<IActionResult> GetAreasByFacility(int facilityId, CancellationToken token)
+        [HttpGet("{areaId}/availability")]
+        public async Task<IActionResult> GetAreaAvailability(int areaId, CancellationToken token)
         {
-            var areas = await _areaService.GetAreasByFacility(facilityId, token);
-            if (areas == null || areas.Count == 0)
-            {
-                return NotFound("No areas found for the given facility ID.");
-            }
-            return Ok(areas);
+            var isAvailable = await _areaService.GetAreaAvailability(areaId, token);
+            return Ok(isAvailable);
         }
     }
 }
