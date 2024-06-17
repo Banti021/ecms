@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ECMS.Models
 {
     [Table("employees")]
-    public class Employee
+    public class Employee : Person
     {
         [Key]
         public int Id { get; set; }
@@ -39,6 +39,15 @@ namespace ECMS.Models
         public Department Department { get; set; }
         public Shift Shift { get; set; }
         public Area Area { get; set; }
-        
+
+        public override string GetFullName()
+        {
+            return $"{Person.GetFullName()} (Employee - {Position})";
+        }
+
+        public decimal CalculateAnnualBonus()
+        {
+            return Salary * 0.1m;
+        }
     }
 }

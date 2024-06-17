@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ECMS.Models
 {
     [Table("customers")]
-    public class Customer
+    public class Customer : Person
     {
         [Key]
         public int Id { get; set; }
@@ -27,5 +27,10 @@ namespace ECMS.Models
         
         public List<Order> Orders { get; set; }
         public List<Reservation> Reservations { get; set; }
+
+        public override string GetFullName()
+        {
+            return $"{Person.GetFullName()} (Customer)";
+        }
     }
 }

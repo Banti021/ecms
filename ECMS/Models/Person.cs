@@ -24,7 +24,7 @@ namespace ECMS.Models
         [Required]
         public string Role { get; set; }
 
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required]
         public string PhoneNumber { get; set; }
@@ -34,5 +34,10 @@ namespace ECMS.Models
 
         [InverseProperty("Person")]
         public Customer Customer { get; set; }
+
+        public virtual string GetFullName()
+        {
+            return $"{FirstName} {LastName}";
+        }
     }
 }
