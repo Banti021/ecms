@@ -78,4 +78,11 @@ public class ReservationController : ControllerBase
         await _service.CompleteReservationAsync(id);
         return NoContent();
     }
+    
+    [HttpGet("count")]
+    public async Task<IActionResult> GetTotalReservations(CancellationToken token)
+    {
+        var totalReservations = await _service.CalculateTotalReservationsAsync();
+        return Ok(totalReservations);
+    }
 }

@@ -165,4 +165,9 @@ public class ReservationService(ApplicationContext context)
                 ConfirmedAt = r.ConfirmedAt ?? DateTime.MinValue
             }).ToListAsync(token);
     }
+    
+    public async Task<int> CalculateTotalReservationsAsync()
+    {
+        return await Reservation.CalculateTotalReservations(context);
+    }
 }

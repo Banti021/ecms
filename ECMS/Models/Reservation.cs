@@ -1,6 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ECMS.Context;
 using ECMS.Enums;
+using Microsoft.EntityFrameworkCore;
 
 namespace ECMS.Models
 {
@@ -30,5 +32,10 @@ namespace ECMS.Models
         public string AdditionalInfo { get; set; }
 
         public List<ReservationArea> ReservationAreas { get; set; }
+        
+        public static async Task<int> CalculateTotalReservations(ApplicationContext context)
+        {
+            return await context.Reservations.CountAsync();
+        }
     }
 }
