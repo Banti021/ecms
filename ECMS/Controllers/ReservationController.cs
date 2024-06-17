@@ -1,5 +1,6 @@
 using ECMS.DTO.Reservation;
 using ECMS.Enums;
+using ECMS.Models;
 using ECMS.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -80,9 +81,8 @@ public class ReservationController : ControllerBase
     }
     
     [HttpGet("count")]
-    public async Task<IActionResult> GetTotalReservations(CancellationToken token)
+    public IActionResult GetTotalReservations()
     {
-        var totalReservations = await _service.CalculateTotalReservationsAsync();
-        return Ok(totalReservations);
+        return Ok(Reservation.TotalReservations);
     }
 }
