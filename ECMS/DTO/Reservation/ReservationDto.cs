@@ -27,4 +27,6 @@ public class ReservationDto
     
     [Required]
     public string AdditionalInfo { get; set; }
+    
+    public List<int> AreaIds { get; set; }
 }

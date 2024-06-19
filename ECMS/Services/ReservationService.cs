@@ -191,4 +191,32 @@ public class ReservationService(ApplicationContext context)
             
         return reservations;
     }
+    
+    public async Task<List<ReservationDto>> GetReservationsByAreaAndDateAsync(int areaId, string date, CancellationToken token)
+    {
+        DateTime selectedDate;
+        if (!DateTime.TryParse(date, out selectedDate))
+        {
+            throw new ArgumentException("Invalid date format", nameof(date));
+        }
+
+        var reservations = await context.Reservations
+            .Include(r => r.ReservationAreas)
+            .Where(r => r.ReservationAreas.Any(ra => ra.AreaId == areaId) &&
+                        r.ReservationFrom.Date == selectedDate.Date)
+            .ToListAsync(token);
+
+        return reservations.Select(r => new ReservationDto
+        {
+            Id = r.Id,
+            ReservationFrom = r.ReservationFrom,
+            ReservationTo = r.ReservationTo,
+            Status = r.Status,
+            Category = r.Category,
+            NumberOfGuests = r.NumberOfGuests,
+            ConfirmedAt = r.ConfirmedAt,
+            AdditionalInfo = r.AdditionalInfo,
+            AreaIds = r.ReservationAreas.Select(ra => ra.AreaId).ToList()
+        }).ToList();
+    }
 }

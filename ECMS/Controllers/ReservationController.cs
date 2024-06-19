@@ -30,6 +30,13 @@ public class ReservationController : ControllerBase
         var reservation = await _service.GetReservationByIdAsync(id, token);
         return Ok(reservation);
     }
+    
+    [HttpGet("area/{areaId}/date/{date}")]
+    public async Task<IActionResult> GetReservationsByAreaAndDate(int areaId, string date, CancellationToken token)
+    {
+        var reservations = await _service.GetReservationsByAreaAndDateAsync(areaId, date, token);
+        return Ok(reservations);
+    }
 
     [HttpPost]
     public async Task<IActionResult> AddReservation([FromBody] MakeReservationDto reservationDto)
