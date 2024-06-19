@@ -6,7 +6,12 @@ namespace ECMS.Context
 {
     public class ApplicationContext : DbContext
     {
-        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
+        private readonly bool _shouldSeedData;
+
+        public ApplicationContext(DbContextOptions<ApplicationContext> options, IConfiguration configuration) : base(options)
+        {
+            _shouldSeedData = configuration.GetValue<bool>("SeedDatabase");
+        }
 
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Area> Areas { get; set; }
@@ -60,12 +65,15 @@ namespace ECMS.Context
                 .HasForeignKey(fs => fs.SupplierId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            AddressSeeder.Seed(modelBuilder);
-            EventSeeder.Seed(modelBuilder);
-            FacilitySeeder.Seed(modelBuilder);
-            AreaSeeder.Seed(modelBuilder);
-            ShiftSeeder.Seed(modelBuilder);
-            DepartmentSeeder.Seed(modelBuilder);
+            if (_shouldSeedData)
+            {
+                AddressSeeder.Seed(modelBuilder);
+                EventSeeder.Seed(modelBuilder);
+                FacilitySeeder.Seed(modelBuilder);
+                AreaSeeder.Seed(modelBuilder);
+                ShiftSeeder.Seed(modelBuilder);
+                DepartmentSeeder.Seed(modelBuilder);
+            }
         }
     }
 }
