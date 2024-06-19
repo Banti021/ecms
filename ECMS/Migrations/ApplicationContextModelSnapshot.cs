@@ -53,72 +53,72 @@ namespace ECMS.Migrations
                         new
                         {
                             Id = 1,
-                            BuildingNo = "0506",
-                            City = "Kutchmouth",
-                            Street = "Wyman Camp"
+                            BuildingNo = "45092",
+                            City = "Lenoraberg",
+                            Street = "Dakota Isle"
                         },
                         new
                         {
                             Id = 2,
-                            BuildingNo = "64951",
-                            City = "North Clementineborough",
-                            Street = "Dickinson Summit"
+                            BuildingNo = "45690",
+                            City = "South Mariam",
+                            Street = "Demetris Ridge"
                         },
                         new
                         {
                             Id = 3,
-                            BuildingNo = "49793",
-                            City = "Eraland",
-                            Street = "Prosacco Common"
+                            BuildingNo = "8263",
+                            City = "Anashire",
+                            Street = "Trent Expressway"
                         },
                         new
                         {
                             Id = 4,
-                            BuildingNo = "27379",
-                            City = "Lake Lula",
-                            Street = "Payton Burg"
+                            BuildingNo = "8027",
+                            City = "New Sadiefort",
+                            Street = "Sauer Trail"
                         },
                         new
                         {
                             Id = 5,
-                            BuildingNo = "2239",
-                            City = "North Edmondmouth",
-                            Street = "Name Plain"
+                            BuildingNo = "45434",
+                            City = "Kiehnbury",
+                            Street = "Littel Throughway"
                         },
                         new
                         {
                             Id = 6,
-                            BuildingNo = "568",
-                            City = "Malachishire",
-                            Street = "Karli Road"
+                            BuildingNo = "764",
+                            City = "New Darrinburgh",
+                            Street = "Queenie Fort"
                         },
                         new
                         {
                             Id = 7,
-                            BuildingNo = "4487",
-                            City = "Hildahaven",
-                            Street = "Mary Divide"
+                            BuildingNo = "497",
+                            City = "Stonetown",
+                            Street = "Alexa Plains"
                         },
                         new
                         {
                             Id = 8,
-                            BuildingNo = "22183",
-                            City = "Port Jaidenfort",
-                            Street = "Jacobs Alley"
+                            BuildingNo = "4073",
+                            City = "Farrellton",
+                            Street = "Upton Groves"
                         },
                         new
                         {
                             Id = 9,
-                            BuildingNo = "389",
-                            City = "Treutelburgh",
-                            Street = "Jessika Court"
+                            BuildingNo = "67125",
+                            City = "Graycechester",
+                            Street = "Paucek Station"
                         },
                         new
                         {
                             Id = 10,
-                            BuildingNo = "177",
-                            City = "New Gerardo",
-                            Street = "Schiller Unions"
+                            BuildingNo = "701",
+                            City = "East Leslyville",
+                            Street = "West Walk"
                         });
                 });
 
@@ -159,452 +159,452 @@ namespace ECMS.Migrations
                         new
                         {
                             Id = 1,
-                            Capacity = 125,
-                            Description = "Rerum recusandae provident libero nemo optio quam labore labore.",
+                            Capacity = 111,
+                            Description = "Quae eaque qui sit ea dicta enim tempore consectetur.",
                             FacilityId = 1,
                             IsAvailable = true,
-                            Name = "Open-source responsive website"
+                            Name = "Distributed responsive customer loyalty"
                         },
                         new
                         {
                             Id = 2,
-                            Capacity = 174,
-                            Description = "Omnis architecto non autem voluptatem nulla.",
+                            Capacity = 83,
+                            Description = "Quidem quia consequuntur voluptas accusantium eos et saepe beatae.",
                             FacilityId = 1,
-                            IsAvailable = true,
-                            Name = "Mandatory demand-driven encoding"
+                            IsAvailable = false,
+                            Name = "Synergized background benchmark"
                         },
                         new
                         {
                             Id = 3,
-                            Capacity = 177,
-                            Description = "Voluptatem impedit et perspiciatis distinctio ad voluptas voluptatem.",
+                            Capacity = 89,
+                            Description = "Et non minima et nam.",
                             FacilityId = 1,
                             IsAvailable = false,
-                            Name = "Realigned fresh-thinking parallelism"
+                            Name = "Face to face exuding encryption"
                         },
                         new
                         {
                             Id = 4,
-                            Capacity = 78,
-                            Description = "Sed quas occaecati in mollitia qui.",
+                            Capacity = 97,
+                            Description = "Nihil voluptatum laboriosam amet.",
                             FacilityId = 1,
                             IsAvailable = true,
-                            Name = "Synergized bifurcated interface"
+                            Name = "Compatible non-volatile website"
                         },
                         new
                         {
                             Id = 5,
                             Capacity = 59,
-                            Description = "Molestiae laudantium est.",
+                            Description = "Dignissimos beatae dolorem corporis aliquam at autem doloribus placeat.",
                             FacilityId = 1,
                             IsAvailable = false,
-                            Name = "Upgradable client-server structure"
+                            Name = "Integrated modular migration"
                         },
                         new
                         {
                             Id = 6,
-                            Capacity = 89,
-                            Description = "Dolor maiores perferendis beatae quia dolorum qui.",
+                            Capacity = 182,
+                            Description = "Inventore nesciunt non provident fugit ea illo ullam reprehenderit.",
                             FacilityId = 2,
-                            IsAvailable = true,
-                            Name = "Cloned 5th generation concept"
+                            IsAvailable = false,
+                            Name = "Switchable logistical interface"
                         },
                         new
                         {
                             Id = 7,
-                            Capacity = 176,
-                            Description = "Rerum quaerat quibusdam ex suscipit in labore aspernatur quis.",
+                            Capacity = 73,
+                            Description = "Recusandae doloremque enim sunt.",
                             FacilityId = 2,
-                            IsAvailable = true,
-                            Name = "Re-contextualized fresh-thinking superstructure"
+                            IsAvailable = false,
+                            Name = "Re-contextualized motivating intranet"
                         },
                         new
                         {
                             Id = 8,
-                            Capacity = 153,
-                            Description = "Quia voluptatem et ex facilis qui assumenda.",
+                            Capacity = 59,
+                            Description = "Quos non quaerat eligendi labore non magnam magni commodi.",
                             FacilityId = 2,
-                            IsAvailable = false,
-                            Name = "Ameliorated object-oriented strategy"
+                            IsAvailable = true,
+                            Name = "Extended stable support"
                         },
                         new
                         {
                             Id = 9,
-                            Capacity = 120,
-                            Description = "Beatae illum modi reiciendis voluptate accusantium optio.",
+                            Capacity = 51,
+                            Description = "Dolor molestiae qui.",
                             FacilityId = 2,
                             IsAvailable = false,
-                            Name = "Synergized optimal open system"
+                            Name = "Open-source systematic intranet"
                         },
                         new
                         {
                             Id = 10,
-                            Capacity = 86,
-                            Description = "Optio aperiam cupiditate quidem rerum quos.",
+                            Capacity = 142,
+                            Description = "Impedit voluptatem nulla pariatur error fugiat.",
                             FacilityId = 2,
                             IsAvailable = true,
-                            Name = "Multi-channelled well-modulated collaboration"
+                            Name = "Customizable contextually-based policy"
                         },
                         new
                         {
                             Id = 11,
-                            Capacity = 52,
-                            Description = "Maiores id fuga numquam unde aut blanditiis occaecati.",
+                            Capacity = 184,
+                            Description = "Aliquam laudantium optio.",
                             FacilityId = 3,
                             IsAvailable = false,
-                            Name = "Phased tangible knowledge base"
+                            Name = "Front-line leading edge installation"
                         },
                         new
                         {
                             Id = 12,
-                            Capacity = 160,
-                            Description = "Beatae nostrum quis optio et suscipit.",
+                            Capacity = 117,
+                            Description = "Et eligendi non qui similique quasi est labore soluta.",
                             FacilityId = 3,
-                            IsAvailable = false,
-                            Name = "Innovative bifurcated archive"
+                            IsAvailable = true,
+                            Name = "Multi-channelled high-level database"
                         },
                         new
                         {
                             Id = 13,
-                            Capacity = 170,
-                            Description = "Et voluptas aut.",
+                            Capacity = 185,
+                            Description = "Corrupti repudiandae quam sit iusto itaque velit ut consequatur.",
                             FacilityId = 3,
                             IsAvailable = false,
-                            Name = "Exclusive 24 hour synergy"
+                            Name = "Implemented executive ability"
                         },
                         new
                         {
                             Id = 14,
-                            Capacity = 187,
-                            Description = "Quo quam nihil.",
+                            Capacity = 171,
+                            Description = "Maxime ducimus rerum impedit aut modi error numquam qui.",
                             FacilityId = 3,
-                            IsAvailable = true,
-                            Name = "Ameliorated zero tolerance hub"
+                            IsAvailable = false,
+                            Name = "Right-sized foreground local area network"
                         },
                         new
                         {
                             Id = 15,
-                            Capacity = 114,
-                            Description = "Id pariatur cupiditate voluptatem nihil quisquam ipsam.",
+                            Capacity = 89,
+                            Description = "Voluptatem id non autem consequatur et sed ut.",
                             FacilityId = 3,
-                            IsAvailable = false,
-                            Name = "Fundamental system-worthy model"
+                            IsAvailable = true,
+                            Name = "Adaptive tangible open architecture"
                         },
                         new
                         {
                             Id = 16,
-                            Capacity = 160,
-                            Description = "Illum ipsa quibusdam at nesciunt enim et et.",
+                            Capacity = 156,
+                            Description = "Tenetur voluptatibus alias libero.",
                             FacilityId = 4,
                             IsAvailable = true,
-                            Name = "Exclusive logistical model"
+                            Name = "Reduced multimedia collaboration"
                         },
                         new
                         {
                             Id = 17,
-                            Capacity = 77,
-                            Description = "Vel veritatis odit reprehenderit et autem dolores.",
+                            Capacity = 50,
+                            Description = "Ab delectus et ea assumenda.",
                             FacilityId = 4,
                             IsAvailable = false,
-                            Name = "Triple-buffered disintermediate alliance"
+                            Name = "Compatible object-oriented capacity"
                         },
                         new
                         {
                             Id = 18,
-                            Capacity = 174,
-                            Description = "Qui excepturi perferendis aut ut.",
+                            Capacity = 130,
+                            Description = "Qui nobis debitis animi et veritatis voluptatem voluptatem.",
                             FacilityId = 4,
-                            IsAvailable = true,
-                            Name = "Synchronised real-time infrastructure"
+                            IsAvailable = false,
+                            Name = "Up-sized zero administration task-force"
                         },
                         new
                         {
                             Id = 19,
-                            Capacity = 99,
-                            Description = "Autem aut velit quos reprehenderit.",
+                            Capacity = 63,
+                            Description = "Neque et et aperiam debitis ut.",
                             FacilityId = 4,
-                            IsAvailable = true,
-                            Name = "Ameliorated asymmetric conglomeration"
+                            IsAvailable = false,
+                            Name = "Vision-oriented system-worthy policy"
                         },
                         new
                         {
                             Id = 20,
-                            Capacity = 87,
-                            Description = "Voluptates deserunt dolor qui.",
+                            Capacity = 107,
+                            Description = "Hic harum atque sint alias qui fugit.",
                             FacilityId = 4,
-                            IsAvailable = true,
-                            Name = "Cloned local architecture"
+                            IsAvailable = false,
+                            Name = "Proactive heuristic superstructure"
                         },
                         new
                         {
                             Id = 21,
-                            Capacity = 155,
-                            Description = "Quos tenetur aut minima et vel unde qui rem.",
+                            Capacity = 107,
+                            Description = "Rerum aut et.",
                             FacilityId = 5,
-                            IsAvailable = false,
-                            Name = "Expanded methodical approach"
+                            IsAvailable = true,
+                            Name = "Front-line composite database"
                         },
                         new
                         {
                             Id = 22,
-                            Capacity = 134,
-                            Description = "Necessitatibus ut qui.",
+                            Capacity = 109,
+                            Description = "Aut qui non quos nostrum accusantium.",
                             FacilityId = 5,
                             IsAvailable = true,
-                            Name = "Expanded bottom-line emulation"
+                            Name = "Right-sized user-facing intranet"
                         },
                         new
                         {
                             Id = 23,
-                            Capacity = 149,
-                            Description = "Ratione dolores consectetur amet ut corporis in molestiae quo necessitatibus.",
+                            Capacity = 164,
+                            Description = "Eaque perferendis omnis enim reiciendis nemo quod est ea.",
                             FacilityId = 5,
                             IsAvailable = true,
-                            Name = "Down-sized reciprocal methodology"
+                            Name = "Organized stable budgetary management"
                         },
                         new
                         {
                             Id = 24,
-                            Capacity = 165,
-                            Description = "Et accusamus ipsa culpa corporis non molestiae.",
+                            Capacity = 167,
+                            Description = "Soluta maxime sit eius quos nostrum ratione.",
                             FacilityId = 5,
-                            IsAvailable = false,
-                            Name = "Secured static encoding"
+                            IsAvailable = true,
+                            Name = "Reverse-engineered attitude-oriented framework"
                         },
                         new
                         {
                             Id = 25,
-                            Capacity = 196,
-                            Description = "Nostrum id ea placeat eum eius.",
+                            Capacity = 58,
+                            Description = "Repellendus officiis veniam cumque quasi voluptates nam voluptate.",
                             FacilityId = 5,
-                            IsAvailable = false,
-                            Name = "Upgradable dynamic leverage"
+                            IsAvailable = true,
+                            Name = "Proactive fresh-thinking monitoring"
                         },
                         new
                         {
                             Id = 26,
-                            Capacity = 181,
-                            Description = "Dicta consequuntur pariatur debitis sed.",
+                            Capacity = 53,
+                            Description = "Maxime dolor enim ad non consequatur perspiciatis deserunt quibusdam sed.",
                             FacilityId = 6,
-                            IsAvailable = false,
-                            Name = "Expanded reciprocal migration"
+                            IsAvailable = true,
+                            Name = "Virtual analyzing leverage"
                         },
                         new
                         {
                             Id = 27,
-                            Capacity = 61,
-                            Description = "Aliquam fugiat et consequatur reprehenderit.",
+                            Capacity = 177,
+                            Description = "Et quia sunt quam sed quia omnis laboriosam.",
                             FacilityId = 6,
-                            IsAvailable = true,
-                            Name = "Enterprise-wide maximized matrices"
+                            IsAvailable = false,
+                            Name = "Advanced mission-critical initiative"
                         },
                         new
                         {
                             Id = 28,
-                            Capacity = 156,
-                            Description = "Voluptatum veritatis qui odit fuga.",
+                            Capacity = 86,
+                            Description = "Id aliquam qui porro deserunt corrupti.",
                             FacilityId = 6,
                             IsAvailable = false,
-                            Name = "Enterprise-wide even-keeled budgetary management"
+                            Name = "Public-key contextually-based structure"
                         },
                         new
                         {
                             Id = 29,
-                            Capacity = 182,
-                            Description = "Mollitia voluptatibus aut consequatur earum unde ab enim.",
+                            Capacity = 53,
+                            Description = "Repellendus quo labore facilis rerum qui nihil velit ea.",
                             FacilityId = 6,
                             IsAvailable = true,
-                            Name = "Customer-focused logistical monitoring"
+                            Name = "Devolved explicit adapter"
                         },
                         new
                         {
                             Id = 30,
-                            Capacity = 178,
-                            Description = "Ipsam numquam sapiente placeat ut consequatur voluptatem earum aut alias.",
+                            Capacity = 168,
+                            Description = "Ipsum id beatae consequatur molestias doloribus dolor illo voluptatem.",
                             FacilityId = 6,
-                            IsAvailable = true,
-                            Name = "Horizontal modular installation"
+                            IsAvailable = false,
+                            Name = "Expanded grid-enabled pricing structure"
                         },
                         new
                         {
                             Id = 31,
-                            Capacity = 189,
-                            Description = "Temporibus libero ipsum ratione fugiat nisi.",
+                            Capacity = 58,
+                            Description = "Illo quia culpa provident odio voluptatem optio a dolorum.",
                             FacilityId = 7,
-                            IsAvailable = false,
-                            Name = "Secured national emulation"
+                            IsAvailable = true,
+                            Name = "Operative encompassing local area network"
                         },
                         new
                         {
                             Id = 32,
-                            Capacity = 168,
-                            Description = "Earum qui qui et aut cupiditate.",
+                            Capacity = 141,
+                            Description = "Rerum alias aut et odio magni voluptate.",
                             FacilityId = 7,
                             IsAvailable = true,
-                            Name = "Progressive bottom-line implementation"
+                            Name = "Upgradable systematic productivity"
                         },
                         new
                         {
                             Id = 33,
-                            Capacity = 54,
-                            Description = "Velit ea quia.",
+                            Capacity = 90,
+                            Description = "Dolores at autem id ea.",
                             FacilityId = 7,
                             IsAvailable = false,
-                            Name = "Re-engineered logistical solution"
+                            Name = "Visionary background groupware"
                         },
                         new
                         {
                             Id = 34,
-                            Capacity = 139,
-                            Description = "In molestiae vel debitis cupiditate est facere vero modi error.",
+                            Capacity = 143,
+                            Description = "Sunt omnis optio exercitationem possimus optio nostrum possimus eaque.",
                             FacilityId = 7,
                             IsAvailable = true,
-                            Name = "Organic systematic customer loyalty"
+                            Name = "Right-sized encompassing installation"
                         },
                         new
                         {
                             Id = 35,
-                            Capacity = 104,
-                            Description = "Magnam facilis consequuntur aut provident dolorum deleniti.",
+                            Capacity = 132,
+                            Description = "Quis quia cupiditate illo quod.",
                             FacilityId = 7,
-                            IsAvailable = true,
-                            Name = "Diverse zero defect hierarchy"
+                            IsAvailable = false,
+                            Name = "Pre-emptive stable benchmark"
                         },
                         new
                         {
                             Id = 36,
-                            Capacity = 62,
-                            Description = "Quis praesentium sint.",
+                            Capacity = 147,
+                            Description = "Minus qui facere sint eum officia dolorum sapiente ipsam velit.",
                             FacilityId = 8,
-                            IsAvailable = true,
-                            Name = "Reduced motivating complexity"
+                            IsAvailable = false,
+                            Name = "Pre-emptive radical project"
                         },
                         new
                         {
                             Id = 37,
-                            Capacity = 139,
-                            Description = "Adipisci quo labore.",
+                            Capacity = 163,
+                            Description = "Autem nam praesentium quaerat ut quia molestiae corrupti ut ut.",
                             FacilityId = 8,
                             IsAvailable = false,
-                            Name = "Adaptive impactful firmware"
+                            Name = "Self-enabling regional functionalities"
                         },
                         new
                         {
                             Id = 38,
-                            Capacity = 152,
-                            Description = "Labore distinctio voluptatem non quo tempora ad.",
+                            Capacity = 151,
+                            Description = "Non soluta provident.",
                             FacilityId = 8,
                             IsAvailable = true,
-                            Name = "Switchable modular product"
+                            Name = "Customizable multi-state adapter"
                         },
                         new
                         {
                             Id = 39,
-                            Capacity = 80,
-                            Description = "Iure iusto quo aut.",
+                            Capacity = 134,
+                            Description = "Dolore debitis recusandae ipsum veniam earum.",
                             FacilityId = 8,
-                            IsAvailable = true,
-                            Name = "Inverse radical interface"
+                            IsAvailable = false,
+                            Name = "Decentralized executive standardization"
                         },
                         new
                         {
                             Id = 40,
-                            Capacity = 194,
-                            Description = "Perspiciatis soluta dignissimos commodi est debitis.",
+                            Capacity = 175,
+                            Description = "Rerum delectus maxime.",
                             FacilityId = 8,
                             IsAvailable = false,
-                            Name = "Secured client-server internet solution"
+                            Name = "Exclusive composite frame"
                         },
                         new
                         {
                             Id = 41,
-                            Capacity = 89,
-                            Description = "Aut reiciendis numquam necessitatibus perferendis mollitia eos modi nostrum.",
+                            Capacity = 154,
+                            Description = "Incidunt consectetur voluptatem velit ea molestias qui quasi quas nihil.",
                             FacilityId = 9,
-                            IsAvailable = false,
-                            Name = "Managed logistical firmware"
+                            IsAvailable = true,
+                            Name = "Cross-platform global alliance"
                         },
                         new
                         {
                             Id = 42,
-                            Capacity = 155,
-                            Description = "Dolor quidem voluptatem corrupti.",
+                            Capacity = 194,
+                            Description = "Cupiditate cumque rerum quod ea.",
                             FacilityId = 9,
-                            IsAvailable = false,
-                            Name = "Balanced context-sensitive data-warehouse"
+                            IsAvailable = true,
+                            Name = "Centralized dynamic process improvement"
                         },
                         new
                         {
                             Id = 43,
-                            Capacity = 98,
-                            Description = "Eum tempora modi voluptatem.",
+                            Capacity = 156,
+                            Description = "Exercitationem doloribus assumenda.",
                             FacilityId = 9,
                             IsAvailable = true,
-                            Name = "Focused user-facing database"
+                            Name = "Centralized tertiary capability"
                         },
                         new
                         {
                             Id = 44,
-                            Capacity = 94,
-                            Description = "Ad illum quam sit aut quas voluptatem dicta.",
+                            Capacity = 143,
+                            Description = "Est temporibus necessitatibus qui dolor iure eius consequatur.",
                             FacilityId = 9,
-                            IsAvailable = false,
-                            Name = "Open-architected regional initiative"
+                            IsAvailable = true,
+                            Name = "Compatible executive productivity"
                         },
                         new
                         {
                             Id = 45,
-                            Capacity = 157,
-                            Description = "Atque hic sint rerum cupiditate distinctio.",
+                            Capacity = 168,
+                            Description = "Porro eos quod eum.",
                             FacilityId = 9,
-                            IsAvailable = false,
-                            Name = "Up-sized clear-thinking throughput"
+                            IsAvailable = true,
+                            Name = "Horizontal composite task-force"
                         },
                         new
                         {
                             Id = 46,
-                            Capacity = 152,
-                            Description = "Qui dignissimos dignissimos molestiae tempora sunt quo et.",
+                            Capacity = 160,
+                            Description = "Officia beatae molestiae reprehenderit.",
                             FacilityId = 10,
-                            IsAvailable = false,
-                            Name = "Decentralized radical local area network"
+                            IsAvailable = true,
+                            Name = "Networked dynamic toolset"
                         },
                         new
                         {
                             Id = 47,
-                            Capacity = 175,
-                            Description = "Adipisci error tenetur vel accusantium at itaque.",
+                            Capacity = 103,
+                            Description = "Eum magnam ullam quia nihil beatae sit.",
                             FacilityId = 10,
-                            IsAvailable = true,
-                            Name = "User-centric disintermediate database"
+                            IsAvailable = false,
+                            Name = "Decentralized heuristic solution"
                         },
                         new
                         {
                             Id = 48,
-                            Capacity = 152,
-                            Description = "Expedita rem nobis omnis provident est odit.",
+                            Capacity = 171,
+                            Description = "Provident laudantium a debitis id fugiat omnis laudantium.",
                             FacilityId = 10,
-                            IsAvailable = false,
-                            Name = "User-friendly coherent Graphic Interface"
+                            IsAvailable = true,
+                            Name = "Managed multi-tasking analyzer"
                         },
                         new
                         {
                             Id = 49,
-                            Capacity = 86,
-                            Description = "Repellat at dolor.",
+                            Capacity = 136,
+                            Description = "Harum corporis ut voluptas.",
                             FacilityId = 10,
                             IsAvailable = true,
-                            Name = "Enhanced client-driven groupware"
+                            Name = "Progressive clear-thinking secured line"
                         },
                         new
                         {
                             Id = 50,
-                            Capacity = 79,
-                            Description = "Suscipit ea sit qui esse perspiciatis.",
+                            Capacity = 141,
+                            Description = "Quam ipsa unde esse nesciunt.",
                             FacilityId = 10,
                             IsAvailable = false,
-                            Name = "Function-based methodical time-frame"
+                            Name = "Cross-group composite ability"
                         });
                 });
 
@@ -629,34 +629,6 @@ namespace ECMS.Migrations
                     b.HasIndex("EventId");
 
                     b.ToTable("area_events");
-                });
-
-            modelBuilder.Entity("ECMS.Models.Customer", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("JoinDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LastVisit")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("PersonId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PersonId")
-                        .IsUnique();
-
-                    b.ToTable("customers");
                 });
 
             modelBuilder.Entity("ECMS.Models.Department", b =>
@@ -686,123 +658,73 @@ namespace ECMS.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "Quis exercitationem maxime quam magnam facere.",
-                            EmployeeCount = 15,
-                            Name = "Home"
+                            Description = "Sapiente rerum non consequuntur blanditiis consequatur sint voluptatem.",
+                            EmployeeCount = 37,
+                            Name = "Music & Kids"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "Totam quis distinctio repellendus dignissimos officiis deleniti sed eos.",
-                            EmployeeCount = 28,
-                            Name = "Sports & Beauty"
+                            Description = "Ut voluptates distinctio aliquam in.",
+                            EmployeeCount = 38,
+                            Name = "Health"
                         },
                         new
                         {
                             Id = 3,
-                            Description = "Quis quod qui corporis.",
-                            EmployeeCount = 50,
-                            Name = "Games"
+                            Description = "Nihil est exercitationem.",
+                            EmployeeCount = 41,
+                            Name = "Baby, Jewelery & Industrial"
                         },
                         new
                         {
                             Id = 4,
-                            Description = "Laboriosam quod quisquam omnis tenetur beatae qui ipsa qui eos.",
-                            EmployeeCount = 36,
-                            Name = "Games"
+                            Description = "Maiores aliquam et.",
+                            EmployeeCount = 19,
+                            Name = "Industrial, Baby & Garden"
                         },
                         new
                         {
                             Id = 5,
-                            Description = "Sed doloremque sit enim modi aut.",
-                            EmployeeCount = 37,
-                            Name = "Beauty, Electronics & Garden"
+                            Description = "Doloremque modi doloribus aut similique aspernatur.",
+                            EmployeeCount = 30,
+                            Name = "Games & Grocery"
                         },
                         new
                         {
                             Id = 6,
-                            Description = "Ut fugit mollitia rerum eligendi est optio repellendus natus distinctio.",
-                            EmployeeCount = 26,
-                            Name = "Sports & Music"
+                            Description = "Dolorem ducimus qui.",
+                            EmployeeCount = 28,
+                            Name = "Electronics, Garden & Sports"
                         },
                         new
                         {
                             Id = 7,
-                            Description = "Dolor sed velit quod aut at voluptas vitae minima.",
-                            EmployeeCount = 17,
-                            Name = "Jewelery, Electronics & Kids"
+                            Description = "Corrupti eum consequatur.",
+                            EmployeeCount = 7,
+                            Name = "Home & Clothing"
                         },
                         new
                         {
                             Id = 8,
-                            Description = "Quod cum quibusdam vitae natus fugiat in eligendi.",
-                            EmployeeCount = 21,
-                            Name = "Toys, Health & Jewelery"
+                            Description = "Dolorem hic mollitia dolorum sint non omnis architecto velit consequatur.",
+                            EmployeeCount = 31,
+                            Name = "Jewelery"
                         },
                         new
                         {
                             Id = 9,
-                            Description = "Expedita qui dolorem omnis ut voluptas quia nobis vitae eos.",
-                            EmployeeCount = 22,
-                            Name = "Automotive"
+                            Description = "Quo quo at dolore officia nulla error eaque repellendus.",
+                            EmployeeCount = 32,
+                            Name = "Garden"
                         },
                         new
                         {
                             Id = 10,
-                            Description = "Dolor minima itaque cupiditate rerum distinctio deleniti doloribus.",
-                            EmployeeCount = 5,
-                            Name = "Industrial & Kids"
+                            Description = "Cupiditate fugit voluptatibus id est tenetur laborum.",
+                            EmployeeCount = 43,
+                            Name = "Kids"
                         });
-                });
-
-            modelBuilder.Entity("ECMS.Models.Employee", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AreaId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("DepartmentId")
-                        .HasColumnType("int");
-
-                    b.Property<DateOnly>("HireDate")
-                        .HasColumnType("date");
-
-                    b.Property<int>("PersonId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Position")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<decimal>("Salary")
-                        .HasColumnType("decimal(18, 2)");
-
-                    b.Property<int>("ShiftId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("SupervisorId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AreaId");
-
-                    b.HasIndex("DepartmentId");
-
-                    b.HasIndex("PersonId")
-                        .IsUnique();
-
-                    b.HasIndex("ShiftId");
-
-                    b.HasIndex("SupervisorId");
-
-                    b.ToTable("employees");
                 });
 
             modelBuilder.Entity("ECMS.Models.Event", b =>
@@ -852,262 +774,262 @@ namespace ECMS.Migrations
                         new
                         {
                             Id = -1,
-                            CurrentAttendees = 41,
-                            Description = "Illo autem sit rem provident sunt porro et sed expedita. Voluptatem facere modi quae modi ullam veniam est aut. Quidem vel eaque tempora voluptatem voluptatem. Ut ab voluptas et et dolorem aut quia asperiores.",
-                            EndTime = new DateTime(2024, 7, 13, 16, 13, 57, 240, DateTimeKind.Local).AddTicks(4758),
-                            EventCategory = 1,
-                            MaxAttendees = 129,
-                            RegularPrice = 142.581476255770630m,
-                            StartTime = new DateTime(2024, 7, 13, 12, 44, 5, 443, DateTimeKind.Local).AddTicks(3099),
-                            Title = "Consequuntur quis eum nihil quis.",
-                            VipPrice = 213.8722143836559450m
+                            CurrentAttendees = 30,
+                            Description = "Voluptatem molestiae cum voluptates eius amet. Fuga est ex culpa dolor culpa sint dolorem. Cum assumenda vero laudantium earum ut iste consectetur nemo. Nobis consequatur repellat aliquam temporibus inventore et occaecati facilis est. Autem natus quis est",
+                            EndTime = new DateTime(2024, 10, 22, 8, 27, 28, 856, DateTimeKind.Local).AddTicks(9960),
+                            EventCategory = 5,
+                            MaxAttendees = 113,
+                            RegularPrice = 137.488946920422670m,
+                            StartTime = new DateTime(2024, 10, 22, 7, 12, 8, 884, DateTimeKind.Local).AddTicks(2187),
+                            Title = "Libero ex animi iure aut eaque id a et sed.",
+                            VipPrice = 206.2334203806340050m
                         },
                         new
                         {
                             Id = -2,
-                            CurrentAttendees = 40,
-                            Description = "Ipsa illo consequatur sed voluptatem aliquam vel recusandae impedit. Rem qui aut ullam sed repudiandae doloremque fugiat autem placeat. Repudiandae dolor dolor itaque sit occaecati neque. Ullam nam ut voluptatem quasi reprehenderit et quia ducimus quia.",
-                            EndTime = new DateTime(2025, 2, 21, 2, 34, 58, 41, DateTimeKind.Local).AddTicks(1447),
+                            CurrentAttendees = 15,
+                            Description = "Distinctio ipsum repellendus commodi sed pariatur iusto cupiditate veritatis sapiente. Quas eos eum maiores reiciendis quia non. Molestiae ad dolorum expedita atque qui quia quidem id. Officiis id non consequuntur fugiat.",
+                            EndTime = new DateTime(2024, 6, 19, 23, 59, 50, 567, DateTimeKind.Local).AddTicks(5303),
                             EventCategory = 5,
-                            MaxAttendees = 136,
-                            RegularPrice = 545.643409367642950m,
-                            StartTime = new DateTime(2025, 2, 21, 0, 35, 51, 17, DateTimeKind.Local).AddTicks(4835),
-                            Title = "Mollitia cupiditate inventore.",
-                            VipPrice = 818.4651140514644250m
+                            MaxAttendees = 99,
+                            RegularPrice = 630.838496502401320m,
+                            StartTime = new DateTime(2024, 6, 19, 20, 49, 49, 540, DateTimeKind.Local).AddTicks(393),
+                            Title = "Molestiae quia et qui illo deserunt.",
+                            VipPrice = 946.2577447536019800m
                         },
                         new
                         {
                             Id = -3,
-                            CurrentAttendees = 43,
-                            Description = "Iste ratione consequuntur tempore. Vel excepturi cumque ut. Aut omnis dolores omnis deleniti quae aut fuga mollitia.",
-                            EndTime = new DateTime(2024, 6, 21, 8, 9, 50, 558, DateTimeKind.Local).AddTicks(4221),
-                            EventCategory = 2,
-                            MaxAttendees = 155,
-                            RegularPrice = 583.378728727307140m,
-                            StartTime = new DateTime(2024, 6, 21, 6, 32, 13, 423, DateTimeKind.Local).AddTicks(4671),
-                            Title = "Dolores earum delectus.",
-                            VipPrice = 875.0680930909607100m
+                            CurrentAttendees = 7,
+                            Description = "Ut sequi illum provident cupiditate iste neque. Autem autem cupiditate. Maiores consequatur sed accusamus.",
+                            EndTime = new DateTime(2024, 12, 9, 19, 41, 28, 165, DateTimeKind.Local).AddTicks(3148),
+                            EventCategory = 4,
+                            MaxAttendees = 193,
+                            RegularPrice = 888.022802337830380m,
+                            StartTime = new DateTime(2024, 12, 9, 18, 7, 47, 271, DateTimeKind.Local).AddTicks(9689),
+                            Title = "Id itaque quas aut odio vel itaque autem nulla.",
+                            VipPrice = 1332.0342035067455700m
                         },
                         new
                         {
                             Id = -4,
-                            CurrentAttendees = 4,
-                            Description = "Et doloribus ea quia qui autem error autem accusamus doloremque. Ut minus quas reiciendis deleniti consequatur. Deleniti modi dolorum.",
-                            EndTime = new DateTime(2024, 10, 21, 18, 33, 27, 459, DateTimeKind.Local).AddTicks(2992),
-                            EventCategory = 2,
-                            MaxAttendees = 136,
-                            RegularPrice = 572.197759967821780m,
-                            StartTime = new DateTime(2024, 10, 21, 16, 21, 22, 962, DateTimeKind.Local).AddTicks(4731),
-                            Title = "Ullam aut ipsam voluptatem.",
-                            VipPrice = 858.2966399517326700m
+                            CurrentAttendees = 36,
+                            Description = "Et sed porro. Culpa nobis amet laborum deserunt voluptates. Vero et provident et repudiandae enim cupiditate odit dignissimos.",
+                            EndTime = new DateTime(2024, 9, 14, 17, 37, 19, 43, DateTimeKind.Local).AddTicks(3576),
+                            EventCategory = 3,
+                            MaxAttendees = 162,
+                            RegularPrice = 810.240644317912930m,
+                            StartTime = new DateTime(2024, 9, 14, 14, 44, 54, 916, DateTimeKind.Local).AddTicks(4547),
+                            Title = "Eaque quo fugiat qui exercitationem harum.",
+                            VipPrice = 1215.3609664768693950m
                         },
                         new
                         {
                             Id = -5,
-                            CurrentAttendees = 14,
-                            Description = "Sit et reiciendis voluptatem reiciendis placeat voluptatem est. Delectus magni voluptas iusto maiores molestiae possimus et. Occaecati rerum odio voluptatem qui ad autem.",
-                            EndTime = new DateTime(2025, 1, 20, 7, 3, 25, 747, DateTimeKind.Local).AddTicks(1718),
-                            EventCategory = 3,
-                            MaxAttendees = 188,
-                            RegularPrice = 195.837598584716320m,
-                            StartTime = new DateTime(2025, 1, 20, 5, 18, 26, 347, DateTimeKind.Local).AddTicks(5339),
-                            Title = "Sunt blanditiis quam ullam id itaque autem et quaerat.",
-                            VipPrice = 293.7563978770744800m
+                            CurrentAttendees = 29,
+                            Description = "Laboriosam qui enim et est sapiente iste ea eius. Et facere nobis. Consequatur consequatur et. Dolor pariatur illo ut. Dolorum aut dolores cupiditate repudiandae voluptatem qui perspiciatis qui error.",
+                            EndTime = new DateTime(2024, 12, 26, 5, 27, 36, 133, DateTimeKind.Local).AddTicks(348),
+                            EventCategory = 2,
+                            MaxAttendees = 122,
+                            RegularPrice = 43.0239279683492740m,
+                            StartTime = new DateTime(2024, 12, 26, 3, 32, 7, 211, DateTimeKind.Local).AddTicks(2793),
+                            Title = "Incidunt et blanditiis.",
+                            VipPrice = 64.53589195252391100m
                         },
                         new
                         {
                             Id = -6,
-                            CurrentAttendees = 30,
-                            Description = "Corrupti velit maxime deserunt cupiditate rem illo. Exercitationem alias rem sit aut. Necessitatibus beatae sint doloremque.",
-                            EndTime = new DateTime(2025, 6, 5, 3, 28, 48, 520, DateTimeKind.Local).AddTicks(8323),
-                            EventCategory = 5,
-                            MaxAttendees = 200,
-                            RegularPrice = 175.049465619820870m,
-                            StartTime = new DateTime(2025, 6, 5, 0, 4, 54, 742, DateTimeKind.Local).AddTicks(1415),
-                            Title = "Dignissimos sit repellendus qui aspernatur aut pariatur quae.",
-                            VipPrice = 262.5741984297313050m
+                            CurrentAttendees = 33,
+                            Description = "Aliquid rerum nulla qui sed quos vel. Quia magnam a nulla. Fuga minus nostrum illum eius et eos omnis earum labore. Quo voluptatem ut magni qui in.",
+                            EndTime = new DateTime(2024, 9, 23, 15, 12, 31, 994, DateTimeKind.Local).AddTicks(5915),
+                            EventCategory = 6,
+                            MaxAttendees = 175,
+                            RegularPrice = 114.745938197385430m,
+                            StartTime = new DateTime(2024, 9, 23, 11, 41, 58, 684, DateTimeKind.Local).AddTicks(7623),
+                            Title = "Vitae fuga eligendi et cupiditate sed dolorum delectus nisi.",
+                            VipPrice = 172.1189072960781450m
                         },
                         new
                         {
                             Id = -7,
-                            CurrentAttendees = 4,
-                            Description = "Asperiores voluptas et quae eum. Amet atque id quisquam iusto repellendus accusantium in. Porro voluptates dignissimos aliquid cupiditate saepe.",
-                            EndTime = new DateTime(2025, 5, 11, 1, 55, 34, 213, DateTimeKind.Local).AddTicks(3835),
-                            EventCategory = 4,
-                            MaxAttendees = 143,
-                            RegularPrice = 108.4971557818964980m,
-                            StartTime = new DateTime(2025, 5, 10, 22, 16, 50, 398, DateTimeKind.Local).AddTicks(8239),
-                            Title = "Fuga necessitatibus natus porro cum.",
-                            VipPrice = 162.74573367284474700m
+                            CurrentAttendees = 9,
+                            Description = "Alias deserunt tenetur eligendi voluptatum ut magnam aut laborum recusandae. Sed molestiae necessitatibus ipsum repudiandae molestiae minima ad maxime. Quia unde harum. Dolores perferendis vitae accusamus voluptate veniam est exercitationem omnis. Deserun",
+                            EndTime = new DateTime(2025, 6, 5, 9, 37, 14, 821, DateTimeKind.Local).AddTicks(3856),
+                            EventCategory = 6,
+                            MaxAttendees = 162,
+                            RegularPrice = 739.55760162807610m,
+                            StartTime = new DateTime(2025, 6, 5, 6, 18, 59, 450, DateTimeKind.Local).AddTicks(9087),
+                            Title = "Dolor ut voluptas ratione eligendi exercitationem quidem necessitatibus quia qui.",
+                            VipPrice = 1109.336402442114150m
                         },
                         new
                         {
                             Id = -8,
-                            CurrentAttendees = 30,
-                            Description = "Exercitationem nesciunt itaque accusamus ratione magni minus id maiores. Enim officiis dolores quo fugit qui explicabo animi sint saepe. Corporis consequatur quis illum est quia sit qui harum.",
-                            EndTime = new DateTime(2024, 12, 22, 4, 24, 13, 787, DateTimeKind.Local).AddTicks(7782),
-                            EventCategory = 1,
-                            MaxAttendees = 100,
-                            RegularPrice = 954.92050483267360m,
-                            StartTime = new DateTime(2024, 12, 22, 3, 14, 34, 49, DateTimeKind.Local).AddTicks(5224),
-                            Title = "Dolor qui ipsa laborum est voluptatibus saepe et dolorum ipsa.",
-                            VipPrice = 1432.380757249010400m
+                            CurrentAttendees = 43,
+                            Description = "Magni molestias sed sed ipsam. Repudiandae et nihil sapiente distinctio omnis molestiae dolores. Quia minus quo sapiente. Eos ipsam autem vero. Sapiente quis sit excepturi nesciunt.",
+                            EndTime = new DateTime(2024, 10, 17, 8, 14, 39, 945, DateTimeKind.Local).AddTicks(4960),
+                            EventCategory = 4,
+                            MaxAttendees = 65,
+                            RegularPrice = 489.116767845314170m,
+                            StartTime = new DateTime(2024, 10, 17, 6, 11, 56, 67, DateTimeKind.Local).AddTicks(5812),
+                            Title = "Qui quia sed nesciunt possimus nisi eos est possimus.",
+                            VipPrice = 733.6751517679712550m
                         },
                         new
                         {
                             Id = -9,
-                            CurrentAttendees = 35,
-                            Description = "Dolor aperiam id quis quidem distinctio possimus beatae libero unde. Ipsa sequi impedit illo quia fuga expedita. Soluta ut ullam perferendis accusantium modi. Reprehenderit enim accusamus. Ut qui consequuntur nemo accusamus. Iste distinctio molestiae offi",
-                            EndTime = new DateTime(2024, 11, 10, 8, 28, 12, 412, DateTimeKind.Local).AddTicks(684),
-                            EventCategory = 5,
-                            MaxAttendees = 189,
-                            RegularPrice = 310.486063855865140m,
-                            StartTime = new DateTime(2024, 11, 10, 6, 35, 35, 908, DateTimeKind.Local).AddTicks(4400),
-                            Title = "Natus et suscipit blanditiis qui placeat placeat molestiae dolor.",
-                            VipPrice = 465.7290957837977100m
+                            CurrentAttendees = 25,
+                            Description = "Voluptatem corrupti ab magni aperiam delectus eum mollitia dolorem. Ipsum impedit ducimus et nobis porro nihil est. Qui aut vero quod voluptatum impedit et. Sint similique illum cupiditate. Sit quod quia illum voluptas harum neque ratione quo aliquid. Id ",
+                            EndTime = new DateTime(2025, 4, 13, 19, 31, 34, 816, DateTimeKind.Local).AddTicks(3531),
+                            EventCategory = 1,
+                            MaxAttendees = 101,
+                            RegularPrice = 313.820723203434910m,
+                            StartTime = new DateTime(2025, 4, 13, 17, 47, 9, 217, DateTimeKind.Local).AddTicks(485),
+                            Title = "Alias et non ducimus numquam dolorem expedita veniam quia impedit.",
+                            VipPrice = 470.7310848051523650m
                         },
                         new
                         {
                             Id = -10,
-                            CurrentAttendees = 36,
-                            Description = "Aut mollitia aut culpa voluptas aut rerum voluptate. Omnis aliquid maxime. Qui in sed cupiditate ea. Dicta et rerum similique quo.",
-                            EndTime = new DateTime(2025, 3, 30, 16, 36, 36, 104, DateTimeKind.Local).AddTicks(3255),
-                            EventCategory = 1,
-                            MaxAttendees = 117,
-                            RegularPrice = 973.393709498769340m,
-                            StartTime = new DateTime(2025, 3, 30, 15, 29, 25, 176, DateTimeKind.Local).AddTicks(9047),
-                            Title = "Omnis ducimus nihil velit voluptas voluptates aut eos non officiis.",
-                            VipPrice = 1460.0905642481540100m
+                            CurrentAttendees = 43,
+                            Description = "Dicta sed voluptatem ipsa porro qui. Optio labore repudiandae sunt minima et quia deserunt voluptatem enim. Harum distinctio velit voluptas libero sit expedita ut.",
+                            EndTime = new DateTime(2024, 11, 26, 21, 5, 27, 785, DateTimeKind.Local).AddTicks(7855),
+                            EventCategory = 4,
+                            MaxAttendees = 168,
+                            RegularPrice = 349.77565639001710m,
+                            StartTime = new DateTime(2024, 11, 26, 17, 50, 23, 962, DateTimeKind.Local).AddTicks(7796),
+                            Title = "Sunt fugit nisi doloribus.",
+                            VipPrice = 524.663484585025650m
                         },
                         new
                         {
                             Id = -11,
-                            CurrentAttendees = 43,
-                            Description = "Incidunt quo voluptas veritatis beatae aut. Et adipisci id natus qui eum aperiam ut quia labore. Aut eveniet quasi quo nisi error omnis quos alias. Natus non praesentium est ut. Voluptas veniam incidunt cum perspiciatis et ut voluptatem alias corporis.",
-                            EndTime = new DateTime(2025, 5, 30, 16, 56, 27, 990, DateTimeKind.Local).AddTicks(5025),
+                            CurrentAttendees = 37,
+                            Description = "Odio molestiae libero cumque eaque recusandae voluptas voluptates rem voluptatem. Quo velit laboriosam natus cum sed impedit aut aspernatur. Nam dolorem officiis itaque inventore sunt repellat. Veniam eligendi sint distinctio quasi repudiandae dicta.",
+                            EndTime = new DateTime(2025, 3, 12, 3, 15, 51, 27, DateTimeKind.Local).AddTicks(4145),
                             EventCategory = 2,
-                            MaxAttendees = 142,
-                            RegularPrice = 67.7194476192150850m,
-                            StartTime = new DateTime(2025, 5, 30, 14, 11, 17, 370, DateTimeKind.Local).AddTicks(816),
-                            Title = "Officiis blanditiis quo eos voluptatum facilis.",
-                            VipPrice = 101.57917142882262750m
+                            MaxAttendees = 89,
+                            RegularPrice = 226.70489927177740m,
+                            StartTime = new DateTime(2025, 3, 11, 23, 55, 54, 28, DateTimeKind.Local).AddTicks(9057),
+                            Title = "Est provident perferendis distinctio quisquam.",
+                            VipPrice = 340.057348907666100m
                         },
                         new
                         {
                             Id = -12,
-                            CurrentAttendees = 40,
-                            Description = "Quis eveniet voluptate velit est. Rem autem rem dolore. Doloremque rem quos sed sint ipsum et ducimus est.",
-                            EndTime = new DateTime(2025, 5, 6, 1, 33, 13, 552, DateTimeKind.Local).AddTicks(258),
-                            EventCategory = 4,
-                            MaxAttendees = 167,
-                            RegularPrice = 158.75082722481850m,
-                            StartTime = new DateTime(2025, 5, 5, 22, 39, 7, 262, DateTimeKind.Local).AddTicks(4680),
-                            Title = "Eligendi et aliquam quia.",
-                            VipPrice = 238.126240837227750m
+                            CurrentAttendees = 42,
+                            Description = "Nesciunt pariatur voluptatibus quaerat illum qui. Ut qui ut vitae quod vero ex. Voluptate neque sed voluptatem.",
+                            EndTime = new DateTime(2025, 3, 7, 3, 6, 29, 381, DateTimeKind.Local).AddTicks(5413),
+                            EventCategory = 1,
+                            MaxAttendees = 195,
+                            RegularPrice = 210.782812219752070m,
+                            StartTime = new DateTime(2025, 3, 6, 23, 27, 4, 384, DateTimeKind.Local).AddTicks(3770),
+                            Title = "Hic tempora fugit id explicabo magnam nihil.",
+                            VipPrice = 316.1742183296281050m
                         },
                         new
                         {
                             Id = -13,
-                            CurrentAttendees = 50,
-                            Description = "Voluptatum voluptatum et harum. Qui magnam animi hic sunt qui est sunt aut. Error quo at omnis error nesciunt dolor.",
-                            EndTime = new DateTime(2025, 1, 17, 18, 10, 29, 512, DateTimeKind.Local).AddTicks(5536),
-                            EventCategory = 3,
-                            MaxAttendees = 116,
-                            RegularPrice = 921.21436767241540m,
-                            StartTime = new DateTime(2025, 1, 17, 16, 8, 38, 581, DateTimeKind.Local).AddTicks(1143),
-                            Title = "Recusandae rerum dolore maiores nostrum animi occaecati dolores.",
-                            VipPrice = 1381.821551508623100m
+                            CurrentAttendees = 8,
+                            Description = "Explicabo expedita dolores aperiam voluptatem. Eius et qui. Tempore quisquam corrupti unde non et eius. Ab quaerat incidunt occaecati et est adipisci molestias sapiente sequi. Distinctio minima asperiores totam ratione voluptas est blanditiis.",
+                            EndTime = new DateTime(2024, 8, 4, 12, 15, 11, 355, DateTimeKind.Local).AddTicks(7873),
+                            EventCategory = 1,
+                            MaxAttendees = 174,
+                            RegularPrice = 83.3528420515005940m,
+                            StartTime = new DateTime(2024, 8, 4, 8, 34, 10, 454, DateTimeKind.Local).AddTicks(1296),
+                            Title = "Dolorum fuga beatae dolores itaque voluptas eum minus.",
+                            VipPrice = 125.02926307725089100m
                         },
                         new
                         {
                             Id = -14,
-                            CurrentAttendees = 17,
-                            Description = "Asperiores non ratione culpa eos recusandae odit excepturi ea. Placeat occaecati et eius incidunt fugit est quaerat cupiditate et. Rerum consequatur sed soluta ea dicta ad repellendus et. Aut rerum sapiente.",
-                            EndTime = new DateTime(2025, 6, 15, 23, 34, 43, 135, DateTimeKind.Local).AddTicks(9676),
-                            EventCategory = 4,
-                            MaxAttendees = 72,
-                            RegularPrice = 330.634516141367560m,
-                            StartTime = new DateTime(2025, 6, 15, 19, 46, 39, 440, DateTimeKind.Local).AddTicks(9725),
-                            Title = "Quo iste alias quis.",
-                            VipPrice = 495.9517742120513400m
+                            CurrentAttendees = 25,
+                            Description = "Sunt et et temporibus nihil facilis. Illum et fugiat amet aut porro sed. Voluptatem voluptatem reiciendis nam sapiente minus temporibus dolore.",
+                            EndTime = new DateTime(2024, 10, 1, 14, 55, 27, 200, DateTimeKind.Local).AddTicks(4708),
+                            EventCategory = 1,
+                            MaxAttendees = 133,
+                            RegularPrice = 303.441741704010790m,
+                            StartTime = new DateTime(2024, 10, 1, 12, 14, 24, 73, DateTimeKind.Local).AddTicks(3869),
+                            Title = "Itaque officiis est quisquam nulla ea occaecati nihil.",
+                            VipPrice = 455.1626125560161850m
                         },
                         new
                         {
                             Id = -15,
-                            CurrentAttendees = 43,
-                            Description = "Ratione ullam pariatur. Vero dolore numquam quod consectetur molestiae odio iure nemo repellendus. In omnis vero perspiciatis et placeat consequatur. Non rerum beatae eius aspernatur assumenda aliquam id reiciendis.",
-                            EndTime = new DateTime(2024, 7, 8, 21, 46, 37, 330, DateTimeKind.Local).AddTicks(3616),
+                            CurrentAttendees = 18,
+                            Description = "Eaque quas eum laboriosam qui atque. Rerum qui expedita perferendis et aut impedit iste. Id non fugit. Provident numquam voluptatum laboriosam qui. Consequuntur iusto molestiae ab delectus. Vero quia illum sed tenetur laudantium mollitia.",
+                            EndTime = new DateTime(2024, 7, 4, 10, 58, 21, 923, DateTimeKind.Local).AddTicks(1173),
                             EventCategory = 5,
-                            MaxAttendees = 165,
-                            RegularPrice = 203.49309094283080m,
-                            StartTime = new DateTime(2024, 7, 8, 18, 34, 50, 572, DateTimeKind.Local).AddTicks(4575),
-                            Title = "Dolorem laborum numquam aut repellendus autem voluptatibus vel modi voluptates.",
-                            VipPrice = 305.239636414246200m
+                            MaxAttendees = 146,
+                            RegularPrice = 22.6437920664805090m,
+                            StartTime = new DateTime(2024, 7, 4, 9, 30, 11, 59, DateTimeKind.Local).AddTicks(528),
+                            Title = "Deleniti qui consequatur sequi laborum laborum omnis nemo.",
+                            VipPrice = 33.96568809972076350m
                         },
                         new
                         {
                             Id = -16,
-                            CurrentAttendees = 50,
-                            Description = "Aut iste voluptas autem labore. Adipisci aut inventore aut ipsam. Et nisi animi quibusdam maiores ipsa optio aut minima quaerat. Et vero culpa placeat voluptas veniam animi. Et fugit id consequatur odit perspiciatis. Alias et unde voluptas.",
-                            EndTime = new DateTime(2024, 9, 17, 3, 48, 33, 143, DateTimeKind.Local).AddTicks(6308),
-                            EventCategory = 6,
-                            MaxAttendees = 62,
-                            RegularPrice = 383.231190804112630m,
-                            StartTime = new DateTime(2024, 9, 17, 2, 31, 34, 580, DateTimeKind.Local).AddTicks(4887),
-                            Title = "Eius omnis voluptate minima consequatur aut accusantium qui.",
-                            VipPrice = 574.8467862061689450m
+                            CurrentAttendees = 27,
+                            Description = "Quia doloribus unde id. Ipsum nostrum et praesentium nesciunt unde sunt aliquid. Voluptate quidem voluptatem odio eius alias ut similique dolore. Ratione qui autem ea totam maxime impedit culpa. Tempora aliquam non.",
+                            EndTime = new DateTime(2024, 8, 3, 9, 41, 51, 10, DateTimeKind.Local).AddTicks(8684),
+                            EventCategory = 1,
+                            MaxAttendees = 63,
+                            RegularPrice = 384.658341665953510m,
+                            StartTime = new DateTime(2024, 8, 3, 8, 6, 52, 229, DateTimeKind.Local).AddTicks(4728),
+                            Title = "Blanditiis sed perferendis.",
+                            VipPrice = 576.9875124989302650m
                         },
                         new
                         {
                             Id = -17,
-                            CurrentAttendees = 43,
-                            Description = "Corporis earum in. Sit dolor quia atque est sunt accusamus. Cumque dolore qui laboriosam sit laboriosam cum quae odio dolores.",
-                            EndTime = new DateTime(2025, 4, 24, 7, 46, 22, 167, DateTimeKind.Local).AddTicks(4794),
-                            EventCategory = 3,
-                            MaxAttendees = 180,
-                            RegularPrice = 965.891917479254140m,
-                            StartTime = new DateTime(2025, 4, 24, 4, 38, 56, 984, DateTimeKind.Local).AddTicks(1895),
-                            Title = "Iure totam libero aliquam corporis.",
-                            VipPrice = 1448.8378762188812100m
+                            CurrentAttendees = 9,
+                            Description = "Error explicabo reiciendis necessitatibus. Laborum natus placeat enim cum nihil nobis aspernatur. Quasi rerum molestiae in architecto ut sint. Non voluptatem rerum perferendis adipisci porro.",
+                            EndTime = new DateTime(2024, 11, 24, 16, 52, 58, 554, DateTimeKind.Local).AddTicks(8828),
+                            EventCategory = 6,
+                            MaxAttendees = 113,
+                            RegularPrice = 190.524176760540250m,
+                            StartTime = new DateTime(2024, 11, 24, 13, 21, 42, 468, DateTimeKind.Local).AddTicks(995),
+                            Title = "Itaque amet ea quidem et dignissimos.",
+                            VipPrice = 285.7862651408103750m
                         },
                         new
                         {
                             Id = -18,
-                            CurrentAttendees = 36,
-                            Description = "Sint nam cupiditate eveniet quis magnam quia et magnam. Aliquid libero rerum. Voluptatem nam sint soluta est voluptas ea nobis iure eius. Recusandae cupiditate unde tempore temporibus fugit est alias omnis facere.",
-                            EndTime = new DateTime(2024, 8, 27, 2, 57, 5, 284, DateTimeKind.Local).AddTicks(7455),
-                            EventCategory = 6,
-                            MaxAttendees = 127,
-                            RegularPrice = 414.194411060764390m,
-                            StartTime = new DateTime(2024, 8, 26, 23, 2, 40, 661, DateTimeKind.Local).AddTicks(3134),
-                            Title = "Voluptatem sunt aliquid itaque eligendi sit.",
-                            VipPrice = 621.2916165911465850m
+                            CurrentAttendees = 17,
+                            Description = "Aliquid porro officiis nisi eligendi pariatur. Aut totam numquam et dignissimos tempore esse sint occaecati. Minus cumque perferendis quasi voluptatum. Officiis placeat et.",
+                            EndTime = new DateTime(2024, 11, 22, 8, 16, 12, 762, DateTimeKind.Local).AddTicks(3126),
+                            EventCategory = 3,
+                            MaxAttendees = 113,
+                            RegularPrice = 96.9033493553629690m,
+                            StartTime = new DateTime(2024, 11, 22, 5, 57, 18, 697, DateTimeKind.Local).AddTicks(5119),
+                            Title = "Ipsam laboriosam minus sunt sed libero sint vitae.",
+                            VipPrice = 145.35502403304445350m
                         },
                         new
                         {
                             Id = -19,
-                            CurrentAttendees = 2,
-                            Description = "Ut aliquid id sunt quasi quis qui repellat ea. Perspiciatis aut voluptatem quo nihil unde totam reprehenderit. Quaerat sunt et a. Iure nihil vel. Consequuntur temporibus et at natus deserunt ut.",
-                            EndTime = new DateTime(2024, 8, 20, 18, 31, 8, 532, DateTimeKind.Local).AddTicks(9381),
-                            EventCategory = 1,
-                            MaxAttendees = 174,
-                            RegularPrice = 583.040559032258680m,
-                            StartTime = new DateTime(2024, 8, 20, 17, 9, 29, 801, DateTimeKind.Local).AddTicks(2713),
-                            Title = "Ab consequatur hic in nihil.",
-                            VipPrice = 874.5608385483880200m
+                            CurrentAttendees = 40,
+                            Description = "Modi et facilis at nemo officia et. Aperiam ea et voluptas dignissimos corrupti illum. Velit laudantium voluptatem iure omnis placeat ab architecto. Maxime atque reiciendis aut delectus voluptas expedita.",
+                            EndTime = new DateTime(2024, 8, 9, 14, 36, 48, 249, DateTimeKind.Local).AddTicks(118),
+                            EventCategory = 4,
+                            MaxAttendees = 135,
+                            RegularPrice = 433.489707847178830m,
+                            StartTime = new DateTime(2024, 8, 9, 12, 3, 13, 606, DateTimeKind.Local).AddTicks(2267),
+                            Title = "Sequi soluta aut dicta eos quia.",
+                            VipPrice = 650.2345617707682450m
                         },
                         new
                         {
                             Id = -20,
-                            CurrentAttendees = 1,
-                            Description = "Sint occaecati ut. Doloribus nisi accusantium voluptas dicta qui mollitia id voluptas mollitia. Incidunt quae non ut. Dignissimos consequatur neque perspiciatis fugit quos facilis.",
-                            EndTime = new DateTime(2025, 4, 1, 22, 9, 22, 916, DateTimeKind.Local).AddTicks(2103),
+                            CurrentAttendees = 28,
+                            Description = "Voluptatem aspernatur dicta necessitatibus quas ullam debitis. Dolor ab dolor aut hic earum eaque mollitia nihil optio. Perferendis aliquam totam. Nostrum sapiente hic hic perferendis itaque est dolorem illo. Natus rerum at eos non omnis.",
+                            EndTime = new DateTime(2025, 5, 4, 19, 0, 39, 892, DateTimeKind.Local).AddTicks(5613),
                             EventCategory = 5,
-                            MaxAttendees = 92,
-                            RegularPrice = 792.254500352883910m,
-                            StartTime = new DateTime(2025, 4, 1, 20, 42, 17, 998, DateTimeKind.Local).AddTicks(3972),
-                            Title = "Assumenda qui inventore ipsum sunt.",
-                            VipPrice = 1188.3817505293258650m
+                            MaxAttendees = 144,
+                            RegularPrice = 595.747584379924120m,
+                            StartTime = new DateTime(2025, 5, 4, 17, 26, 28, 228, DateTimeKind.Local).AddTicks(1184),
+                            Title = "Porro maiores nisi aut.",
+                            VipPrice = 893.6213765698861800m
                         });
                 });
 
@@ -1174,81 +1096,81 @@ namespace ECMS.Migrations
                         {
                             Id = 1,
                             AddressId = 1,
-                            Capacity = 340,
-                            Description = "Qui nostrum dolorem soluta voluptatibus sint commodi porro accusantium.",
-                            Name = "Zulauf, Fritsch and Johnson"
+                            Capacity = 176,
+                            Description = "Voluptatem voluptatem ratione earum sed sequi facilis accusantium sequi.",
+                            Name = "Bayer, Bahringer and Waelchi"
                         },
                         new
                         {
                             Id = 2,
                             AddressId = 2,
-                            Capacity = 302,
-                            Description = "Perferendis ea velit.",
-                            Name = "Rath Group"
+                            Capacity = 303,
+                            Description = "Est assumenda ducimus non veritatis.",
+                            Name = "Murazik - Russel"
                         },
                         new
                         {
                             Id = 3,
                             AddressId = 3,
-                            Capacity = 360,
-                            Description = "Et consequatur est consequuntur sint.",
-                            Name = "Schuster, Koss and Renner"
+                            Capacity = 421,
+                            Description = "Rerum assumenda nihil quia ea velit aliquam.",
+                            Name = "Boehm Group"
                         },
                         new
                         {
                             Id = 4,
                             AddressId = 4,
-                            Capacity = 426,
-                            Description = "Hic eum ut dolor est suscipit quas.",
-                            Name = "Schoen, Medhurst and Bernier"
+                            Capacity = 322,
+                            Description = "Officia et tenetur architecto excepturi ut quasi iste commodi esse.",
+                            Name = "Hudson - Padberg"
                         },
                         new
                         {
                             Id = 5,
                             AddressId = 5,
-                            Capacity = 211,
-                            Description = "Corporis nulla vel.",
-                            Name = "Kling Group"
+                            Capacity = 464,
+                            Description = "Suscipit labore nihil eligendi consectetur rem officiis delectus praesentium recusandae.",
+                            Name = "Thompson Inc"
                         },
                         new
                         {
                             Id = 6,
                             AddressId = 6,
-                            Capacity = 152,
-                            Description = "Aut non et provident ab architecto.",
-                            Name = "Toy Group"
+                            Capacity = 150,
+                            Description = "Quis possimus neque eos debitis maiores.",
+                            Name = "Greenfelder - Mann"
                         },
                         new
                         {
                             Id = 7,
                             AddressId = 7,
-                            Capacity = 184,
-                            Description = "Veniam mollitia veniam quis distinctio omnis iure distinctio.",
-                            Name = "Kuvalis Group"
+                            Capacity = 473,
+                            Description = "Possimus non exercitationem quia in repellat qui autem quia.",
+                            Name = "Legros - MacGyver"
                         },
                         new
                         {
                             Id = 8,
                             AddressId = 8,
-                            Capacity = 308,
-                            Description = "Eaque assumenda eveniet nemo natus tempora praesentium.",
-                            Name = "Crist LLC"
+                            Capacity = 146,
+                            Description = "Praesentium incidunt qui.",
+                            Name = "Witting and Sons"
                         },
                         new
                         {
                             Id = 9,
                             AddressId = 9,
-                            Capacity = 412,
-                            Description = "Rerum fuga officia animi eius et nam optio.",
-                            Name = "Mitchell LLC"
+                            Capacity = 389,
+                            Description = "In consequatur alias minima voluptatibus et velit.",
+                            Name = "Haag LLC"
                         },
                         new
                         {
                             Id = 10,
                             AddressId = 10,
-                            Capacity = 188,
-                            Description = "Eveniet placeat exercitationem tenetur neque omnis ut.",
-                            Name = "Koelpin Inc"
+                            Capacity = 178,
+                            Description = "Aut repudiandae aperiam et unde asperiores hic numquam sit.",
+                            Name = "Hyatt, Cronin and Mitchell"
                         });
                 });
 
@@ -1340,7 +1262,6 @@ namespace ECMS.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
@@ -1370,6 +1291,8 @@ namespace ECMS.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("persons");
+
+                    b.UseTptMappingStrategy();
                 });
 
             modelBuilder.Entity("ECMS.Models.Product", b =>
@@ -1475,14 +1398,14 @@ namespace ECMS.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("FromHour")
-                        .HasColumnType("datetime2");
+                    b.Property<TimeSpan>("FromHour")
+                        .HasColumnType("time");
 
                     b.Property<int>("ShiftType")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("ToHour")
-                        .HasColumnType("datetime2");
+                    b.Property<TimeSpan>("ToHour")
+                        .HasColumnType("time");
 
                     b.HasKey("Id");
 
@@ -1492,72 +1415,72 @@ namespace ECMS.Migrations
                         new
                         {
                             Id = 1,
-                            FromHour = new DateTime(2023, 12, 9, 2, 3, 54, 479, DateTimeKind.Local).AddTicks(4080),
-                            ShiftType = 3,
-                            ToHour = new DateTime(2025, 5, 3, 11, 29, 30, 278, DateTimeKind.Local).AddTicks(7605)
+                            FromHour = new TimeSpan(0, 6, 52, 0, 0),
+                            ShiftType = 2,
+                            ToHour = new TimeSpan(0, 15, 24, 0, 0)
                         },
                         new
                         {
                             Id = 2,
-                            FromHour = new DateTime(2024, 1, 29, 12, 31, 42, 520, DateTimeKind.Local).AddTicks(6838),
+                            FromHour = new TimeSpan(0, 16, 24, 0, 0),
                             ShiftType = 1,
-                            ToHour = new DateTime(2024, 11, 16, 12, 7, 42, 519, DateTimeKind.Local).AddTicks(440)
+                            ToHour = new TimeSpan(0, 17, 19, 0, 0)
                         },
                         new
                         {
                             Id = 3,
-                            FromHour = new DateTime(2024, 1, 16, 12, 6, 52, 485, DateTimeKind.Local).AddTicks(1448),
-                            ShiftType = 1,
-                            ToHour = new DateTime(2024, 8, 29, 23, 34, 23, 498, DateTimeKind.Local).AddTicks(9119)
+                            FromHour = new TimeSpan(0, 4, 41, 0, 0),
+                            ShiftType = 2,
+                            ToHour = new TimeSpan(0, 20, 57, 0, 0)
                         },
                         new
                         {
                             Id = 4,
-                            FromHour = new DateTime(2023, 9, 19, 0, 45, 35, 700, DateTimeKind.Local).AddTicks(9902),
-                            ShiftType = 1,
-                            ToHour = new DateTime(2024, 12, 9, 7, 17, 44, 694, DateTimeKind.Local).AddTicks(7039)
+                            FromHour = new TimeSpan(0, 0, 53, 0, 0),
+                            ShiftType = 2,
+                            ToHour = new TimeSpan(0, 7, 54, 0, 0)
                         },
                         new
                         {
                             Id = 5,
-                            FromHour = new DateTime(2024, 5, 19, 3, 8, 59, 147, DateTimeKind.Local).AddTicks(8362),
-                            ShiftType = 2,
-                            ToHour = new DateTime(2024, 7, 21, 4, 59, 43, 660, DateTimeKind.Local).AddTicks(8696)
+                            FromHour = new TimeSpan(0, 6, 6, 0, 0),
+                            ShiftType = 3,
+                            ToHour = new TimeSpan(0, 22, 27, 0, 0)
                         },
                         new
                         {
                             Id = 6,
-                            FromHour = new DateTime(2024, 5, 13, 8, 28, 58, 334, DateTimeKind.Local).AddTicks(9345),
-                            ShiftType = 2,
-                            ToHour = new DateTime(2025, 4, 6, 11, 7, 13, 49, DateTimeKind.Local).AddTicks(4428)
+                            FromHour = new TimeSpan(0, 19, 6, 0, 0),
+                            ShiftType = 1,
+                            ToHour = new TimeSpan(0, 17, 26, 0, 0)
                         },
                         new
                         {
                             Id = 7,
-                            FromHour = new DateTime(2023, 10, 28, 7, 43, 19, 864, DateTimeKind.Local).AddTicks(8880),
-                            ShiftType = 3,
-                            ToHour = new DateTime(2024, 9, 4, 10, 26, 47, 873, DateTimeKind.Local).AddTicks(9306)
+                            FromHour = new TimeSpan(0, 3, 29, 0, 0),
+                            ShiftType = 1,
+                            ToHour = new TimeSpan(0, 0, 34, 0, 0)
                         },
                         new
                         {
                             Id = 8,
-                            FromHour = new DateTime(2024, 2, 3, 14, 4, 50, 270, DateTimeKind.Local).AddTicks(3910),
-                            ShiftType = 1,
-                            ToHour = new DateTime(2025, 5, 18, 0, 47, 49, 769, DateTimeKind.Local).AddTicks(9511)
+                            FromHour = new TimeSpan(0, 10, 10, 0, 0),
+                            ShiftType = 2,
+                            ToHour = new TimeSpan(0, 11, 35, 0, 0)
                         },
                         new
                         {
                             Id = 9,
-                            FromHour = new DateTime(2023, 7, 3, 23, 11, 37, 787, DateTimeKind.Local).AddTicks(2185),
+                            FromHour = new TimeSpan(0, 10, 49, 0, 0),
                             ShiftType = 1,
-                            ToHour = new DateTime(2025, 6, 7, 21, 40, 35, 364, DateTimeKind.Local).AddTicks(3375)
+                            ToHour = new TimeSpan(0, 16, 14, 0, 0)
                         },
                         new
                         {
                             Id = 10,
-                            FromHour = new DateTime(2024, 3, 26, 0, 18, 11, 416, DateTimeKind.Local).AddTicks(2018),
+                            FromHour = new TimeSpan(0, 18, 14, 0, 0),
                             ShiftType = 2,
-                            ToHour = new DateTime(2025, 5, 3, 21, 13, 15, 739, DateTimeKind.Local).AddTicks(5156)
+                            ToHour = new TimeSpan(0, 8, 27, 0, 0)
                         });
                 });
 
@@ -1637,6 +1560,74 @@ namespace ECMS.Migrations
                     b.ToTable("tickets");
                 });
 
+            modelBuilder.Entity("ECMS.Models.Customer", b =>
+                {
+                    b.HasBaseType("ECMS.Models.Person");
+
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("JoinDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("LastVisit")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("PersonId")
+                        .IsUnique()
+                        .HasFilter("[PersonId] IS NOT NULL");
+
+                    b.ToTable("customers");
+                });
+
+            modelBuilder.Entity("ECMS.Models.Employee", b =>
+                {
+                    b.HasBaseType("ECMS.Models.Person");
+
+                    b.Property<int>("AreaId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("DepartmentId")
+                        .HasColumnType("int");
+
+                    b.Property<DateOnly>("HireDate")
+                        .HasColumnType("date");
+
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Position")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<decimal>("Salary")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<int>("ShiftId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SupervisorId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("AreaId");
+
+                    b.HasIndex("DepartmentId");
+
+                    b.HasIndex("PersonId")
+                        .IsUnique()
+                        .HasFilter("[PersonId] IS NOT NULL");
+
+                    b.HasIndex("ShiftId");
+
+                    b.HasIndex("SupervisorId");
+
+                    b.ToTable("employees");
+                });
+
             modelBuilder.Entity("ECMS.Models.Area", b =>
                 {
                     b.HasOne("ECMS.Models.Facility", "Facility")
@@ -1665,56 +1656,6 @@ namespace ECMS.Migrations
                     b.Navigation("Area");
 
                     b.Navigation("Event");
-                });
-
-            modelBuilder.Entity("ECMS.Models.Customer", b =>
-                {
-                    b.HasOne("ECMS.Models.Person", "Person")
-                        .WithOne("Customer")
-                        .HasForeignKey("ECMS.Models.Customer", "PersonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Person");
-                });
-
-            modelBuilder.Entity("ECMS.Models.Employee", b =>
-                {
-                    b.HasOne("ECMS.Models.Area", "Area")
-                        .WithMany("Employees")
-                        .HasForeignKey("AreaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ECMS.Models.Department", "Department")
-                        .WithMany("Employees")
-                        .HasForeignKey("DepartmentId");
-
-                    b.HasOne("ECMS.Models.Person", "Person")
-                        .WithOne("Employee")
-                        .HasForeignKey("ECMS.Models.Employee", "PersonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ECMS.Models.Shift", "Shift")
-                        .WithMany("Employees")
-                        .HasForeignKey("ShiftId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ECMS.Models.Employee", "Supervisor")
-                        .WithMany()
-                        .HasForeignKey("SupervisorId");
-
-                    b.Navigation("Area");
-
-                    b.Navigation("Department");
-
-                    b.Navigation("Person");
-
-                    b.Navigation("Shift");
-
-                    b.Navigation("Supervisor");
                 });
 
             modelBuilder.Entity("ECMS.Models.EventCustomer", b =>
@@ -1860,6 +1801,68 @@ namespace ECMS.Migrations
                     b.Navigation("Supplier");
                 });
 
+            modelBuilder.Entity("ECMS.Models.Customer", b =>
+                {
+                    b.HasOne("ECMS.Models.Person", null)
+                        .WithOne()
+                        .HasForeignKey("ECMS.Models.Customer", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ECMS.Models.Person", "Person")
+                        .WithOne("Customer")
+                        .HasForeignKey("ECMS.Models.Customer", "PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Person");
+                });
+
+            modelBuilder.Entity("ECMS.Models.Employee", b =>
+                {
+                    b.HasOne("ECMS.Models.Area", "Area")
+                        .WithMany("Employees")
+                        .HasForeignKey("AreaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ECMS.Models.Department", "Department")
+                        .WithMany("Employees")
+                        .HasForeignKey("DepartmentId");
+
+                    b.HasOne("ECMS.Models.Person", null)
+                        .WithOne()
+                        .HasForeignKey("ECMS.Models.Employee", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ECMS.Models.Person", "Person")
+                        .WithOne("Employee")
+                        .HasForeignKey("ECMS.Models.Employee", "PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ECMS.Models.Shift", "Shift")
+                        .WithMany("Employees")
+                        .HasForeignKey("ShiftId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ECMS.Models.Employee", "Supervisor")
+                        .WithMany()
+                        .HasForeignKey("SupervisorId");
+
+                    b.Navigation("Area");
+
+                    b.Navigation("Department");
+
+                    b.Navigation("Person");
+
+                    b.Navigation("Shift");
+
+                    b.Navigation("Supervisor");
+                });
+
             modelBuilder.Entity("ECMS.Models.Address", b =>
                 {
                     b.Navigation("Facilities");
@@ -1874,13 +1877,6 @@ namespace ECMS.Migrations
                     b.Navigation("Employees");
 
                     b.Navigation("ReservationAreas");
-                });
-
-            modelBuilder.Entity("ECMS.Models.Customer", b =>
-                {
-                    b.Navigation("Orders");
-
-                    b.Navigation("Reservations");
                 });
 
             modelBuilder.Entity("ECMS.Models.Department", b =>
@@ -1943,6 +1939,13 @@ namespace ECMS.Migrations
             modelBuilder.Entity("ECMS.Models.Ticket", b =>
                 {
                     b.Navigation("EventCustomers");
+                });
+
+            modelBuilder.Entity("ECMS.Models.Customer", b =>
+                {
+                    b.Navigation("Orders");
+
+                    b.Navigation("Reservations");
                 });
 #pragma warning restore 612, 618
         }
