@@ -41,7 +41,12 @@
                       <button
                           v-for="slot in timeSlots"
                           :key="slot"
-                          :class="{'bg-gray-200': selectedSlot !== slot, 'bg-purple-200': selectedSlot === slot}"
+                          :disabled="isSlotReserved(slot)"
+                          :class="{
+                          'bg-gray-200': !isSlotReserved(slot) && selectedSlot !== slot,
+                          'bg-purple-200': selectedSlot === slot,
+                          'bg-red-200': isSlotReserved(slot)
+                        }"
                           class="rounded-full px-4 py-2"
                           @click="selectSlot(slot)"
                       >
@@ -72,24 +77,26 @@
         @close="isReservationModalOpen = false"
         :selectedDate="selectedDate"
         :selectedSlot="selectedSlot"
-        :areaId="route.params.areaId"
-        :customerId="1"
+        :areaId="Number(route.params.areaId)"
+        :customerId="4"
     />
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import BaseNavbar from '../components/BaseNavbar.vue';
 import { useAreas } from '../composables/useAreas';
 import ReservationFormModal from '../components/ReservationFormModal.vue';
+import { useReservations } from '../composables/useReservations';
 
 const route = useRoute();
 const areaError = ref(null);
 const reserveError = ref(null);
 
 const { fetchArea, area } = useAreas();
+const { getReservationsByAreaAndDate } = useReservations();
 
 const timeSlots = ref([
   '09:00 - 10:00', '10:00 - 11:00', '11:00 - 12:00', '12:00 - 13:00',
@@ -107,7 +114,9 @@ const updateDayHeader = () => {
 };
 
 const selectSlot = (slot) => {
-  selectedSlot.value = slot;
+  if (!isSlotReserved(slot)) {
+    selectedSlot.value = slot;
+  }
 };
 
 const openReservationModal = () => {
@@ -122,6 +131,29 @@ const openReservationModal = () => {
   }
   isReservationModalOpen.value = true;
 };
+
+const reservedSlots = ref([]);
+
+const isSlotReserved = (slot) => {
+  return reservedSlots.value.includes(slot);
+};
+
+const fetchReservedSlots = async () => {
+  if (!selectedDate.value) return;
+  reservedSlots.value = [];
+  try {
+    const reservations = await getReservationsByAreaAndDate(Number(route.params.areaId), selectedDate.value);
+    reservedSlots.value = reservations.map(res => {
+      const from = new Date(res.reservationFrom).toLocaleTimeString('pl-PL', { hour: '2-digit', minute: '2-digit' });
+      const to = new Date(res.reservationTo).toLocaleTimeString('pl-PL', { hour: '2-digit', minute: '2-digit' });
+      return `${from} - ${to}`;
+    });
+  } catch (err) {
+    console.error('Failed to fetch reserved slots', err);
+  }
+};
+
+watch(selectedDate, fetchReservedSlots);
 
 const fetchAreaDetails = async () => {
   try {

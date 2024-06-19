@@ -103,6 +103,17 @@ export function useReservations() {
         }
     };
 
+    const getReservationsByAreaAndDate = async (areaId, date) => {
+        try {
+            const response = await apiClient.get(`/Reservation/area/${areaId}/date/${date}`);
+            return response.data;
+        } catch (err) {
+            console.error('Error getting reservations by area and date:', err);
+            error.value = err;
+            throw err;
+        }
+    };
+
     return {
         reservations,
         reservation,
@@ -116,5 +127,6 @@ export function useReservations() {
         confirmReservation,
         cancelReservation,
         completeReservation,
+        getReservationsByAreaAndDate
     };
 }

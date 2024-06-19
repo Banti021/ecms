@@ -86,19 +86,25 @@
   </TransitionRoot>
 </template>
 
+
 <script setup>
 import { ref, watch, defineProps } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { CheckIcon } from '@heroicons/vue/24/outline'
-// import { useRoute, useRouter } from 'vue-router'
 import { useReservations } from '../composables/useReservations'
 
 const props = defineProps({
   open: Boolean,
   selectedDate: String,
   selectedSlot: String,
-  areaId: Number,
-  customerId: Number,
+  areaId: {
+    type: Number,
+    required: true
+  },
+  customerId: {
+    type: Number,
+    required: true
+  },
   onClose: Function
 })
 
@@ -110,11 +116,11 @@ const additionalInfo = ref('')
 const reserveError = ref(null)
 
 const { addReservation } = useReservations()
-// const route = useRoute()
-// const router = useRouter()
 
 const reserveArea = async () => {
   reserveError.value = null;
+
+  // Parsing the selected slot times
   const [start, end] = props.selectedSlot.split(' - ').map(time => {
     const [hours, minutes] = time.split(':');
     const date = new Date(props.selectedDate);
@@ -122,6 +128,11 @@ const reserveArea = async () => {
     date.setMinutes(minutes);
     return date;
   });
+
+  // Adjusting for UTC offset
+  const offset = start.getTimezoneOffset();
+  start.setMinutes(start.getMinutes() - offset);
+  end.setMinutes(end.getMinutes() - offset);
 
   const reservationDto = {
     ReservationFrom: start.toISOString(),
@@ -144,10 +155,9 @@ const reserveArea = async () => {
 const closeModalAndRedirect = () => {
   open.value = false;
   props.onClose();
-  // router.push({ name: 'Profile' });
 };
 
 watch(() => props.open, (newVal) => {
   open.value = newVal;
-})
+});
 </script>
