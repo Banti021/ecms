@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using ECMS.Enums;
 using Toolbelt.ComponentModel.DataAnnotations.Schema;
 
 namespace ECMS.Models
@@ -16,7 +17,7 @@ namespace ECMS.Models
         public DateTime OrderDate { get; set; }
 
         [Required]
-        public int Status { get; set; }
+        public OrderStatus Status { get; set; }
 
         public decimal? TotalAmount { get; set; }
 
@@ -26,5 +27,10 @@ namespace ECMS.Models
         public Customer Customer { get; set; }
 
         public List<OrderProduct> OrderProducts { get; set; }
+        
+        public int CalculateTotalAmount()
+        {
+            return OrderProducts.Sum(op => op.Product.Price * op.Quantity);
+        }
     }
 }

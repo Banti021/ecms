@@ -6,6 +6,11 @@ namespace ECMS.Models
     [Table("facilities")]
     public class Facility
     {
+        public Facility()
+        {
+            Areas = new List<Area>();
+        }
+        
         [Key]
         public int Id { get; set; }
         

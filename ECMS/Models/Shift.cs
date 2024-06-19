@@ -14,10 +14,10 @@ namespace ECMS.Models
         public ShiftType ShiftType { get; set; }
         
         [Required]
-        public DateTime FromHour { get; set; }
+        public TimeSpan FromHour { get; set; }
         
         [Required]
-        public DateTime ToHour { get; set; }
+        public TimeSpan ToHour { get; set; }
         
         public List<Employee> Employees { get; set; }
     }
