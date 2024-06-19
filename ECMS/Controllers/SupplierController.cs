@@ -22,6 +22,13 @@ public class SupplierController(SupplierService service): ControllerBase
         return Ok(supplier);
     }
     
+    [HttpGet("{id}/products")]
+    public async Task<IActionResult> GetSupplierProducts(int id, CancellationToken token)
+    {
+        var products = await service.GetSupplierProducts(id, token);
+        return Ok(products);
+    }
+    
     [HttpPost]
     public async Task<IActionResult> AddSupplier(Supplier supplier, CancellationToken token)
     {
