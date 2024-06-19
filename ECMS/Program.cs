@@ -47,6 +47,7 @@ namespace ECMS
             builder.Services.AddScoped<ShiftService>();
             builder.Services.AddScoped<SupplierService>();
             builder.Services.AddScoped<TicketService>();
+            builder.Services.AddScoped<PersonService>();
 
             // Add CORS services
             builder.Services.AddCors(options =>
