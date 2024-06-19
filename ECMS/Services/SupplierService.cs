@@ -16,6 +16,16 @@ public class SupplierService(ApplicationContext context)
         return await context.Suppliers.ToListAsync(token);
     }
     
+    public async Task<List<Product>> GetSupplierProducts(int id, CancellationToken token)
+    {
+        var supplier = await context.Suppliers
+            .Include(s => s.SupplierProducts)
+            .ThenInclude(sp => sp.Product)
+            .FirstOrDefaultAsync(s => s.Id == id, token);
+        
+        return supplier.SupplierProducts.Select(sp => sp.Product).ToList();
+    }
+    
     public async Task<Supplier> AddSupplierAsync(Supplier supplier)
     {
         var newSupplier = await context.Suppliers.AddAsync(supplier);

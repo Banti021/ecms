@@ -8,11 +8,9 @@ namespace ECMS.Services;
 
 public class DepartmentService(ApplicationContext context)
 {
-    private readonly ApplicationContext _context = context;
-    
     public async Task<List<DepartmentDto>> GetAllDepartmentsAsync(CancellationToken token)
     {
-        var departments = await _context.Departments.Select(department => new DepartmentDto
+        var departments = await context.Departments.Select(department => new DepartmentDto
         {
             Id = department.Id,
             Name = department.Name,
@@ -25,7 +23,7 @@ public class DepartmentService(ApplicationContext context)
     
     public async Task<DepartmentDto> GetDepartmentByIdAsync(int id, CancellationToken token)
     {
-        var department = await _context.Departments.Include(d => d.Employees).FirstOrDefaultAsync(d => d.Id == id, token);
+        var department = await context.Departments.Include(d => d.Employees).FirstOrDefaultAsync(d => d.Id == id, token);
         if (department == null) throw new Exception("Department not found");
         return new DepartmentDto
         {
@@ -44,8 +42,8 @@ public class DepartmentService(ApplicationContext context)
             Description = departmentDto.Description
         };
         
-        await _context.Departments.AddAsync(department);
-        await _context.SaveChangesAsync();
+        await context.Departments.AddAsync(department);
+        await context.SaveChangesAsync();
         
         return new DepartmentDto
         {
@@ -57,13 +55,13 @@ public class DepartmentService(ApplicationContext context)
     
     public async Task<DepartmentDto> UpdateDepartmentAsync(int id, DepartmentDto departmentDto)
     {
-        var department = await _context.Departments.FindAsync(id);
+        var department = await context.Departments.FindAsync(id);
         if (department == null) throw new Exception("Department not found");
         
         department.Name = departmentDto.Name;
         department.Description = departmentDto.Description;
         
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
         
         return new DepartmentDto
         {
@@ -75,16 +73,16 @@ public class DepartmentService(ApplicationContext context)
     
     public async Task DeleteDepartmentAsync(int id)
     {
-        var department = await _context.Departments.FindAsync(id);
+        var department = await context.Departments.FindAsync(id);
         if (department == null) throw new Exception("Department not found");
         
-        _context.Departments.Remove(department);
-        await _context.SaveChangesAsync();
+        context.Departments.Remove(department);
+        await context.SaveChangesAsync();
     }
     
     public async Task<List<EmployeeDto>> GetEmployeesByDepartmentIdAsync(int departmentId, CancellationToken token)
     {
-        var department = await _context.Departments.Include(d => d.Employees).FirstOrDefaultAsync(d => d.Id == departmentId, token);
+        var department = await context.Departments.Include(d => d.Employees).FirstOrDefaultAsync(d => d.Id == departmentId, token);
         if (department == null) throw new Exception("Department not found");
         
         var employees = department.Employees.Select(employee => new EmployeeDto
@@ -107,25 +105,25 @@ public class DepartmentService(ApplicationContext context)
     
     public async Task<string> AssignEmployeeToDepartmentAsync(int departmentId, EmployeeDepartmentDto employeeDepartmentDto)
     {
-        var employee = await _context.Employees.FindAsync(employeeDepartmentDto.EmployeeId);
+        var employee = await context.Employees.FindAsync(employeeDepartmentDto.EmployeeId);
         if (employee == null) throw new Exception("Employee not found");
 
-        var department = await _context.Departments.FindAsync(departmentId);
+        var department = await context.Departments.FindAsync(departmentId);
         if (department == null) throw new Exception("Department not found");
 
         employee.DepartmentId = departmentId;
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
 
         return "Employee successfully assigned to department";
     }
 
     public async Task<string> RemoveEmployeeFromDepartmentAsync(EmployeeDepartmentDto employeeDepartmentDto)
     {
-        var employee = await _context.Employees.FindAsync(employeeDepartmentDto.EmployeeId);
+        var employee = await context.Employees.FindAsync(employeeDepartmentDto.EmployeeId);
         if (employee == null) throw new Exception("Employee not found");
 
         employee.DepartmentId = null;
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
 
         return "Employee successfully removed from department";
     }

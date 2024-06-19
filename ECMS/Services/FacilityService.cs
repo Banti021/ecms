@@ -1,6 +1,10 @@
 using ECMS.Context;
 using ECMS.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ECMS.Services
 {
@@ -17,6 +21,7 @@ namespace ECMS.Services
         {
             return await _context.Facilities
                 .Include(f => f.Address)
+                .Include(f => f.Areas)
                 .ToListAsync(token);
         }
 
@@ -24,6 +29,7 @@ namespace ECMS.Services
         {
             return await _context.Facilities
                 .Include(f => f.Address)
+                .Include(f => f.Areas)
                 .FirstOrDefaultAsync(f => f.Id == id, token);
         }
         
@@ -89,7 +95,5 @@ namespace ECMS.Services
             await _context.SaveChangesAsync();
             return facility;
         }
-
     }
 }
-
