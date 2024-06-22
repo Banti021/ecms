@@ -3,6 +3,7 @@ import { onMounted } from 'vue';
 import { useAuthStore } from '../store/auth';
 import { useReservations } from '../composables/useReservations';
 import { useTickets } from '../composables/useTickets';
+import BaseNavbar from '../components/BaseNavbar.vue';
 
 const authStore = useAuthStore();
 const { user, fetchUser } = authStore;
@@ -18,6 +19,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <BaseNavbar />
   <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
     <div class="bg-white shadow overflow-hidden sm:rounded-lg">
       <div class="px-4 py-5 sm:px-6">

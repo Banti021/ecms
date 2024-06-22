@@ -1,45 +1,9 @@
-<script setup>
-import { ref, onMounted, computed } from 'vue';
-import { useRoute } from 'vue-router';
-import { useEvents } from '../composables/useEvents';
-import BaseNavbar from '../components/BaseNavbar.vue';
-
-// Event categories mapping
-const eventCategories = {
-  1: 'Concert',
-  2: 'Workshop',
-  3: 'Bowling Tournament',
-  4: 'Billard Tournament',
-  5: 'Movie Show',
-  6: 'Holiday Event'
-};
-
-const route = useRoute();
-const { event, fetchEvent, error } = useEvents();
-
-const ticketQuantity = ref(1);
-const ticketType = ref('regular');
-
-onMounted(() => {
-  fetchEvent(route.params.eventId);
-});
-
-const ticketPrice = computed(() => {
-  if (!event.value) return 0;
-  return ticketType.value === 'vip' ? event.value.vipPrice : event.value.regularPrice;
-});
-
-const buyTicket = () => {
-  console.log(`Buying ${ticketQuantity.value} ${ticketType.value} tickets for event ${event.value.title}`);
-};
-</script>
-
 <template>
   <BaseNavbar />
   <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="md:col-span-2">
-      <div v-if="error" class="text-red-500 mb-4">
-        Error loading event details.
+      <div v-if="eventError || ticketError" class="text-red-500 mb-4">
+        Error loading event details or purchasing ticket.
       </div>
       <div v-if="event" class="bg-white shadow overflow-hidden sm:rounded-lg">
         <div class="px-4 py-5 sm:px-6">
@@ -108,4 +72,63 @@ const buyTicket = () => {
       </div>
     </div>
   </div>
+
+  <!-- Ticket Purchase Modal -->
+  <TicketPurchaseModal :open="showPurchaseModal" @onClose="closePurchaseModal" />
 </template>
+
+<script setup>
+import {ref, onMounted, computed} from 'vue';
+import {useRoute} from 'vue-router';
+import {useEvents} from '../composables/useEvents';
+import {useTickets} from '../composables/useTickets';
+import BaseNavbar from '../components/BaseNavbar.vue';
+import TicketPurchaseModal from '../components/TicketPurchaseModal.vue';
+import {useAuthStore} from '../store/auth';
+
+// Event categories mapping
+const eventCategories = {
+  1: 'Concert',
+  2: 'Workshop',
+  3: 'Bowling Tournament',
+  4: 'Billard Tournament',
+  5: 'Movie Show',
+  6: 'Holiday Event'
+};
+
+const route = useRoute();
+const {event, fetchEvent, error: eventError} = useEvents();
+const {buyTicket: buyTicketApi, ticketSuccess, error: ticketError} = useTickets();
+const authStore = useAuthStore(); // Use the auth store to get user details
+
+const ticketQuantity = ref(1);
+const ticketType = ref('regular');
+const showPurchaseModal = ref(false);
+
+onMounted(() => {
+  fetchEvent(route.params.eventId);
+});
+
+const ticketPrice = computed(() => {
+  if (!event.value) return 0;
+  return ticketType.value === 'vip' ? event.value.vipPrice : event.value.regularPrice;
+});
+
+const buyTicket = async () => {
+  if (!event.value) return;
+
+  try {
+    await buyTicketApi(event.value, ticketType.value, ticketQuantity.value, false, '', authStore);
+    if (ticketSuccess.value) {
+      showPurchaseModal.value = true;
+    }
+    console.log(`Bought ${ticketQuantity.value} ${ticketType.value} tickets for event ${event.value.title}`);
+  } catch (err) {
+    console.error('Failed to buy ticket:', err);
+  }
+};
+
+const closePurchaseModal = () => {
+  showPurchaseModal.value = false;
+};
+</script>

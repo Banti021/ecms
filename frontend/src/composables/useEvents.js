@@ -23,8 +23,10 @@ export function useEvents() {
     const fetchEvent = async (id) => {
         try {
             const response = await apiClient.get(`/Event/${id}`);
+            console.log("Event", response.data);
             event.value = response.data;
         } catch (err) {
+            console.error("API error", err);
             error.value = err;
         }
     };
