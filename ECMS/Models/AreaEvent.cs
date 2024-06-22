@@ -8,17 +8,17 @@ namespace ECMS.Models
     {
         [Key]
         public int Id { get; set; }
-        
+
         [Required]
-        [ForeignKey("Area")]
         public int AreaId { get; set; }
-        
+
         [Required]
-        [ForeignKey("Event")]
         public int EventId { get; set; }
-        
+
+        [ForeignKey("AreaId")]
         public Area Area { get; set; }
+
+        [ForeignKey("EventId")]
         public Event Event { get; set; }
     }
 }
-

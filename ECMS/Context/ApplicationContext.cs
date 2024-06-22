@@ -52,30 +52,28 @@ namespace ECMS.Context
             {
                 entity.Property(e => e.TotalAmount).HasColumnType("decimal(18, 2)");
             });
-            
-            // Konfiguracja relacji Facility - Areas z kaskadowym usuwaniem (Kompozycja)
+
             modelBuilder.Entity<Facility>()
                 .HasMany(f => f.Areas)
                 .WithOne(a => a.Facility)
                 .HasForeignKey(a => a.FacilityId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Konfiguracja innych relacji
             modelBuilder.Entity<Area>()
                 .HasMany(a => a.Employees)
-                .WithOne()
+                .WithOne(e => e.Area)
                 .HasForeignKey(e => e.AreaId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Area>()
                 .HasMany(a => a.ReservationAreas)
-                .WithOne()
+                .WithOne(ra => ra.Area)
                 .HasForeignKey(ra => ra.AreaId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Area>()
                 .HasMany(a => a.AreaEvents)
-                .WithOne()
+                .WithOne(ae => ae.Area)
                 .HasForeignKey(ae => ae.AreaId)
                 .OnDelete(DeleteBehavior.Cascade);
 

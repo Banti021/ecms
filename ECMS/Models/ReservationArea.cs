@@ -8,17 +8,17 @@ namespace ECMS.Models
     {
         [Key]
         public int Id { get; set; }
-        
+
         [Required]
-        [ForeignKey("Reservation")]
         public int ReservationId { get; set; }
-        
+
         [Required]
-        [ForeignKey("Area")]
         public int AreaId { get; set; }
-        
+
+        [ForeignKey("ReservationId")]
         public Reservation Reservation { get; set; }
+
+        [ForeignKey("AreaId")]
         public Area Area { get; set; }
     }
 }
-
